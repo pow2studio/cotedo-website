@@ -20,31 +20,76 @@
 
 <body>
 
-<nav id="nav" class="navbar pure-menu pure-menu-horizontal pure-menu-fixed">
-    <a class="pure-menu-heading logo" href="#">cotedo</a>
-    <ul class="pure-menu-list">
-        <li class="pure-menu-item pure-menu-selected">
-            <a href="#" class="pure-menu-link">Welcome</a></li>
-        <li class="pure-menu-item">
-            <a href="#" class="pure-menu-link">Strengths</a></li>
-        <li class="pure-menu-item">
-            <a href="#" class="pure-menu-link">Team</a></li>
-        <li class="pure-menu-item">
-            <a href="#" class="pure-menu-link">News</a></li>
-    </ul>
+<nav class="mobile-nav">
+    <div class="header">
+        <img src="/assets/img/cotedo_logo.jpg" width="240" height="64">
+        <button class="nav-btn close"></button>
+    </div>
+    <div class="items">
+        <a href="#welcome">Welcome</a>
+        <hr>
+        <a href="#strengths">Strengths</a>
+        <hr>
+        <a href="#team">Team</a>
+        <hr>
+        <a href="#news">News</a>
+        <div class="langs">
+            <hr>
+            <a class="active" href="#">English</a>
+            
+            
+            &ensp;&bull;&ensp;
+            
+            <a href="/de/">Deutsch</a>
+            
+            
+             
+        </div>
+    </div>
 </nav>
 
-<section id="welcome" class="rellax" data-rellax-speed="-3">
+
+<nav id="navbar" class="navbar pure-menu pure-menu-horizontal pure-menu-fixed">
+    <a class="pure-menu-heading logo" href="/en/">cotedo</a>
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-selected">
+            <a href="#welcome" class="pure-menu-link">Welcome</a></li>
+        <li class="pure-menu-item">
+            <a href="#strengths" class="pure-menu-link">Strengths</a>
+        </li>
+        <li class="pure-menu-item">
+            <a href="#team" class="pure-menu-link">Team</a></li>
+        <li class="pure-menu-item">
+            <a href="#news" class="pure-menu-link">News
+                <span class="news-indicator" data-latest="2017-08-31 00:00:00 +0200"></span></a>
+        </li>
+        <li class="pure-menu-item">
+            <button class="lang-dd">en<span class="dd-arrow"></span></button>
+            <ul class="lang-chooser">
+                <li><a class="active" href="#">English</a></li>
+                
+                
+                
+                <li><a href="/de/">Deutsch</a></li>
+                
+                
+                 
+            </ul>
+        </li>
+    </ul>
+    <button class="nav-btn toggle"></button>
+</nav>
+
+<section class="sec-welcome-cover rellax behind" data-rellax-speed="-3">
+    <div id="first-bubble" class="bubble-left rellax" data-rellax-speed="-4">
+        <div class="bubble-content">
+            <h1 class="claim-q">Our aspiration?</h1>
+            <h1 class="claim-a">The perfect solution!</h1>
+        </div>
+    </div>
 </section>
 
-<div id="first-bubble" class="bubble-left rellax" data-rellax-speed="-4">
-    <div class="bubble-content">
-        <h1 class="claim-q">Our aspiration?</h1>
-        <h1 class="claim-a">The perfect solution!</h1>
-    </div>
-</div>
-
-<section id="intro">
+<section id="welcome" class="sec-welcome">
     <div class="pure-g">
         <div class="pure-u-1-24 pure-u-sm-1-12 pure-u-lg-1-6">&nbsp;</div>
         <div class="pure-u-11-12 pure-u-sm-5-6 pure-u-lg-2-3">
@@ -68,7 +113,7 @@
     </div>
 </section>
 
-<section id="stats">
+<section id="stats" class="sec-stats">
     <div class="pure-g">
         <div class="pure-u-1-24 pure-u-sm-1-12 pure-u-lg-1-6">&nbsp;</div>
         <div class="pure-u-11-12 pure-u-sm-5-6 pure-u-lg-2-3">
@@ -94,7 +139,7 @@
     </div>
 </section>
 
-<section id="strengths" class="above">
+<section id="strengths" class="sec-strengths">
     <div class="pure-g">
         <div class="pure-u-1-24 pure-u-sm-1-12 pure-u-lg-1-6">&nbsp;</div>
         <div class="pure-u-11-12 pure-u-sm-5-6 pure-u-lg-2-3">
@@ -178,18 +223,18 @@
     </div>
 </section>
 
-<section id="team-cover" class="rellax" data-rellax-speed="-3" data-rellax-percentage="0.3">
+<section class="sec-team-cover rellax behind" data-rellax-speed="-3"
+         data-rellax-percentage="0.5">
+    <div id="second-bubble" class="bubble-right rellax" data-rellax-speed="-4"
+         data-rellax-percentage="0.3">
+        <div class="bubble-content">
+            <h1 class="claim-q">Our recipe for success?</h1>
+            <h1 class="claim-a">A strong team!</h1>
+        </div>
+    </div>
 </section>
 
-<div id="second-bubble" class="bubble-right rellax" data-rellax-speed="-4"
-     data-rellax-percentage="0.3">
-    <div class="bubble-content">
-        <h1 class="claim-q">Our recipe for success?</h1>
-        <h1 class="claim-a">A strong team!</h1>
-    </div>
-</div>
-
-<section id="team" class="above">
+<section id="team" class="sec-team">
     <div class="pure-g">
         <div class="pure-u-1-24 pure-u-sm-1-12 pure-u-lg-1-6">&nbsp;</div>
         <div class="pure-u-11-12 pure-u-sm-5-6 pure-u-lg-2-3">
@@ -211,13 +256,15 @@
                 
                 
                 <div class="wrapper">
-                    <div class="member">
-                        <img src="/assets/img/team/stefan-g_600x600.jpg" alt="Stefan Gatt">
-                        <div class="info">
-                            <h3>Stefan Gatt</h3>
-                            <h4>Management</h4>
+                    <a href="/en/team/">
+                        <div class="member">
+                            <img src="/assets/img/team/stefan-g_600x600.jpg" alt="Stefan Gatt">
+                            <div class="info">
+                                <h3>Stefan Gatt</h3>
+                                <h4>Management</h4>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 
                 
@@ -226,132 +273,105 @@
                 
                 
                 <div class="wrapper">
-                    <div class="member">
-                        <img src="/assets/img/team/dennis-h_600x600.jpg" alt="Dennis Hartmann">
-                        <div class="info">
-                            <h3>Dennis Hartmann</h3>
-                            <h4>Automotive Aftersales Consulting</h4>
+                    <a href="/en/team/">
+                        <div class="member">
+                            <img src="/assets/img/team/dennis-h_600x600.jpg" alt="Dennis Hartmann">
+                            <div class="info">
+                                <h3>Dennis Hartmann</h3>
+                                <h4>Automotive Aftersales Consulting</h4>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 
                 
                 
                 
                 <div class="wrapper">
-                    <div class="member">
-                        <img src="/assets/img/team/henning-b_600x600.jpg" alt="Henning Böttjer">
-                        <div class="info">
-                            <h3>Henning Böttjer</h3>
-                            <h4>Automotive Aftersales Consulting</h4>
+                    <a href="/en/team/">
+                        <div class="member">
+                            <img src="/assets/img/team/henning-b_600x600.jpg" alt="Henning Böttjer">
+                            <div class="info">
+                                <h3>Henning Böttjer</h3>
+                                <h4>Automotive Aftersales Consulting</h4>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 
                 
                 
                 
                 <div class="wrapper">
-                    <div class="member">
-                        <img src="/assets/img/team/juliane-r_600x600.jpg" alt="Juliane Rückebeil">
-                        <div class="info">
-                            <h3>Juliane Rückebeil</h3>
-                            <h4>Automotive Aftersales Consulting</h4>
+                    <a href="/en/team/">
+                        <div class="member">
+                            <img src="/assets/img/team/juliane-r_600x600.jpg" alt="Juliane Rückebeil">
+                            <div class="info">
+                                <h3>Juliane Rückebeil</h3>
+                                <h4>Automotive Aftersales Consulting</h4>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 
                 
                 
                 
                 <div class="wrapper">
-                    <div class="member">
-                        <img src="/assets/img/team/lina-h_600x600.jpg" alt="Lina Hartmann">
-                        <div class="info">
-                            <h3>Lina Hartmann</h3>
-                            <h4>Automotive Aftersales Consulting</h4>
+                    <a href="/en/team/">
+                        <div class="member">
+                            <img src="/assets/img/team/lina-h_600x600.jpg" alt="Lina Hartmann">
+                            <div class="info">
+                                <h3>Lina Hartmann</h3>
+                                <h4>Automotive Aftersales Consulting</h4>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 
                 
                 
                 
                 <div class="wrapper">
-                    <div class="member">
-                        <img src="/assets/img/team/nicholas-z_600x600.jpg" alt="Nicholas Zimmermann">
-                        <div class="info">
-                            <h3>Nicholas Zimmermann</h3>
-                            <h4>Automotive Aftersales Consulting</h4>
+                    <a href="/en/team/">
+                        <div class="member">
+                            <img src="/assets/img/team/nicholas-z_600x600.jpg" alt="Nicholas Zimmermann">
+                            <div class="info">
+                                <h3>Nicholas Zimmermann</h3>
+                                <h4>Automotive Aftersales Consulting</h4>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 
                 
                 
                 
                 <div class="wrapper">
-                    <div class="member">
-                        <img src="/assets/img/team/thomas-d_600x600.jpg" alt="Thomas Dumbs">
-                        <div class="info">
-                            <h3>Thomas Dumbs</h3>
-                            <h4>Automotive Aftersales Consulting</h4>
+                    <a href="/en/team/">
+                        <div class="member">
+                            <img src="/assets/img/team/thomas-d_600x600.jpg" alt="Thomas Dumbs">
+                            <div class="info">
+                                <h3>Thomas Dumbs</h3>
+                                <h4>Automotive Aftersales Consulting</h4>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 
                 
                 
                 
                 <div class="wrapper">
-                    <div class="member">
-                        <img src="/assets/img/team/thorsten-b_600x600.jpg" alt="Thorsten Binder">
-                        <div class="info">
-                            <h3>Thorsten Binder</h3>
-                            <h4>Automotive Aftersales Consulting</h4>
+                    <a href="/en/team/">
+                        <div class="member">
+                            <img src="/assets/img/team/thorsten-b_600x600.jpg" alt="Thorsten Binder">
+                            <div class="info">
+                                <h3>Thorsten Binder</h3>
+                                <h4>Automotive Aftersales Consulting</h4>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                
-                
-                
-                
-                
-                
-                <div class="wrapper">
-                    <div class="member">
-                        <img src="/assets/img/team/alinda-s_600x600.jpg" alt="Alinda Schmidl">
-                        <div class="info">
-                            <h3>Alinda Schmidl</h3>
-                            <h4>Marketing & Communication</h4>
-                        </div>
-                    </div>
-                </div>
-                
-                
-                
-                
-                <div class="wrapper">
-                    <div class="member">
-                        <img src="/assets/img/team/katharina-h_600x600.jpg" alt="Katharina Hradil">
-                        <div class="info">
-                            <h3>Katharina Hradil</h3>
-                            <h4>Marketing & Communication</h4>
-                        </div>
-                    </div>
-                </div>
-                
-                
-                
-                
-                <div class="wrapper">
-                    <div class="member">
-                        <img src="/assets/img/team/sebastian-s_600x600.jpg" alt="Sebastian Sachsinger">
-                        <div class="info">
-                            <h3>Sebastian Sachsinger</h3>
-                            <h4>Marketing & Communication</h4>
-                        </div>
-                    </div>
+                    </a>
                 </div>
                 
                 
@@ -360,13 +380,45 @@
                 
                 
                 <div class="wrapper">
-                    <div class="member">
-                        <img src="/assets/img/team/mareike-g_600x600.jpg" alt="Mareike Gatt">
-                        <div class="info">
-                            <h3>Mareike Gatt</h3>
-                            <h4>Office Management</h4>
+                    <a href="/en/team/">
+                        <div class="member">
+                            <img src="/assets/img/team/alinda-s_600x600.jpg" alt="Alinda Schmidl">
+                            <div class="info">
+                                <h3>Alinda Schmidl</h3>
+                                <h4>Marketing & Communication</h4>
+                            </div>
                         </div>
-                    </div>
+                    </a>
+                </div>
+                
+                
+                
+                
+                <div class="wrapper">
+                    <a href="/en/team/">
+                        <div class="member">
+                            <img src="/assets/img/team/katharina-h_600x600.jpg" alt="Katharina Hradil">
+                            <div class="info">
+                                <h3>Katharina Hradil</h3>
+                                <h4>Marketing & Communication</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                
+                
+                
+                <div class="wrapper">
+                    <a href="/en/team/">
+                        <div class="member">
+                            <img src="/assets/img/team/sebastian-s_600x600.jpg" alt="Sebastian Sachsinger">
+                            <div class="info">
+                                <h3>Sebastian Sachsinger</h3>
+                                <h4>Marketing & Communication</h4>
+                            </div>
+                        </div>
+                    </a>
                 </div>
                 
                 
@@ -375,52 +427,15 @@
                 
                 
                 <div class="wrapper">
-                    <div class="member">
-                        <img src="/assets/img/team/andreas-l_600x600.jpg" alt="Andreas Lemke">
-                        <div class="info">
-                            <h3>Andreas Lemke</h3>
-                            <h4>Project & Rollout Management</h4>
+                    <a href="/en/team/">
+                        <div class="member">
+                            <img src="/assets/img/team/mareike-g_600x600.jpg" alt="Mareike Gatt">
+                            <div class="info">
+                                <h3>Mareike Gatt</h3>
+                                <h4>Office Management</h4>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                
-                
-                
-                
-                <div class="wrapper">
-                    <div class="member">
-                        <img src="/assets/img/team/anna-h_600x600.jpg" alt="Anna Hartl">
-                        <div class="info">
-                            <h3>Anna Hartl</h3>
-                            <h4>Project & Rollout Management</h4>
-                        </div>
-                    </div>
-                </div>
-                
-                
-                
-                
-                <div class="wrapper">
-                    <div class="member">
-                        <img src="/assets/img/team/mario-k_600x600.jpg" alt="Mario Kohlmann">
-                        <div class="info">
-                            <h3>Mario Kohlmann</h3>
-                            <h4>Project & Rollout Management</h4>
-                        </div>
-                    </div>
-                </div>
-                
-                
-                
-                
-                <div class="wrapper">
-                    <div class="member">
-                        <img src="/assets/img/team/michael-g_600x600.jpg" alt="Michael Gatt">
-                        <div class="info">
-                            <h3>Michael Gatt</h3>
-                            <h4>Project & Rollout Management</h4>
-                        </div>
-                    </div>
+                    </a>
                 </div>
                 
                 
@@ -429,104 +444,182 @@
                 
                 
                 <div class="wrapper">
-                    <div class="member">
-                        <img src="/assets/img/team/angela-b_600x600.jpg" alt="Angela Burgmair">
-                        <div class="info">
-                            <h3>Angela Burgmair</h3>
-                            <h4>Sales & Distribution Management</h4>
+                    <a href="/en/team/">
+                        <div class="member">
+                            <img src="/assets/img/team/andreas-l_600x600.jpg" alt="Andreas Lemke">
+                            <div class="info">
+                                <h3>Andreas Lemke</h3>
+                                <h4>Project & Rollout Management</h4>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 
                 
                 
                 
                 <div class="wrapper">
-                    <div class="member">
-                        <img src="/assets/img/team/carolin-j_600x600.jpg" alt="Carolin Junghans">
-                        <div class="info">
-                            <h3>Carolin Junghans</h3>
-                            <h4>Sales & Distribution Management</h4>
+                    <a href="/en/team/">
+                        <div class="member">
+                            <img src="/assets/img/team/anna-h_600x600.jpg" alt="Anna Hartl">
+                            <div class="info">
+                                <h3>Anna Hartl</h3>
+                                <h4>Project & Rollout Management</h4>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 
                 
                 
                 
                 <div class="wrapper">
-                    <div class="member">
-                        <img src="/assets/img/team/christian-p_600x600.jpg" alt="Christian Pruner">
-                        <div class="info">
-                            <h3>Christian Pruner</h3>
-                            <h4>Sales & Distribution Management</h4>
+                    <a href="/en/team/">
+                        <div class="member">
+                            <img src="/assets/img/team/mario-k_600x600.jpg" alt="Mario Kohlmann">
+                            <div class="info">
+                                <h3>Mario Kohlmann</h3>
+                                <h4>Project & Rollout Management</h4>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 
                 
                 
                 
                 <div class="wrapper">
-                    <div class="member">
-                        <img src="/assets/img/team/christina-m_600x600.jpg" alt="Christina Mautz">
-                        <div class="info">
-                            <h3>Christina Mautz</h3>
-                            <h4>Sales & Distribution Management</h4>
+                    <a href="/en/team/">
+                        <div class="member">
+                            <img src="/assets/img/team/michael-g_600x600.jpg" alt="Michael Gatt">
+                            <div class="info">
+                                <h3>Michael Gatt</h3>
+                                <h4>Project & Rollout Management</h4>
+                            </div>
                         </div>
-                    </div>
+                    </a>
+                </div>
+                
+                
+                
+                
+                
+                
+                <div class="wrapper">
+                    <a href="/en/team/">
+                        <div class="member">
+                            <img src="/assets/img/team/angela-b_600x600.jpg" alt="Angela Burgmair">
+                            <div class="info">
+                                <h3>Angela Burgmair</h3>
+                                <h4>Sales & Distribution Management</h4>
+                            </div>
+                        </div>
+                    </a>
                 </div>
                 
                 
                 
                 
                 <div class="wrapper">
-                    <div class="member">
-                        <img src="/assets/img/team/kristina-b_600x600.jpg" alt="Kristina B.">
-                        <div class="info">
-                            <h3>Kristina B.</h3>
-                            <h4>Sales & Distribution Management</h4>
+                    <a href="/en/team/">
+                        <div class="member">
+                            <img src="/assets/img/team/carolin-j_600x600.jpg" alt="Carolin Junghans">
+                            <div class="info">
+                                <h3>Carolin Junghans</h3>
+                                <h4>Sales & Distribution Management</h4>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 
                 
                 
                 
                 <div class="wrapper">
-                    <div class="member">
-                        <img src="/assets/img/team/raimund-k_600x600.jpg" alt="Raimund Kupecek">
-                        <div class="info">
-                            <h3>Raimund Kupecek</h3>
-                            <h4>Sales & Distribution Management</h4>
+                    <a href="/en/team/">
+                        <div class="member">
+                            <img src="/assets/img/team/christian-p_600x600.jpg" alt="Christian Pruner">
+                            <div class="info">
+                                <h3>Christian Pruner</h3>
+                                <h4>Sales & Distribution Management</h4>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 
                 
                 
                 
                 <div class="wrapper">
-                    <div class="member">
-                        <img src="/assets/img/team/roland-e_600x600.jpg" alt="Roland Edlhuber">
-                        <div class="info">
-                            <h3>Roland Edlhuber</h3>
-                            <h4>Sales & Distribution Management</h4>
+                    <a href="/en/team/">
+                        <div class="member">
+                            <img src="/assets/img/team/christina-m_600x600.jpg" alt="Christina Mautz">
+                            <div class="info">
+                                <h3>Christina Mautz</h3>
+                                <h4>Sales & Distribution Management</h4>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 
                 
                 
                 
                 <div class="wrapper">
-                    <div class="member">
-                        <img src="/assets/img/team/tanja-s_600x600.jpg" alt="Tanja Saiko">
-                        <div class="info">
-                            <h3>Tanja Saiko</h3>
-                            <h4>Sales & Distribution Management</h4>
+                    <a href="/en/team/">
+                        <div class="member">
+                            <img src="/assets/img/team/kristina-b_600x600.jpg" alt="Kristina B.">
+                            <div class="info">
+                                <h3>Kristina B.</h3>
+                                <h4>Sales & Distribution Management</h4>
+                            </div>
                         </div>
-                    </div>
+                    </a>
+                </div>
+                
+                
+                
+                
+                <div class="wrapper">
+                    <a href="/en/team/">
+                        <div class="member">
+                            <img src="/assets/img/team/raimund-k_600x600.jpg" alt="Raimund Kupecek">
+                            <div class="info">
+                                <h3>Raimund Kupecek</h3>
+                                <h4>Sales & Distribution Management</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                
+                
+                
+                <div class="wrapper">
+                    <a href="/en/team/">
+                        <div class="member">
+                            <img src="/assets/img/team/roland-e_600x600.jpg" alt="Roland Edlhuber">
+                            <div class="info">
+                                <h3>Roland Edlhuber</h3>
+                                <h4>Sales & Distribution Management</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                
+                
+                
+                <div class="wrapper">
+                    <a href="/en/team/">
+                        <div class="member">
+                            <img src="/assets/img/team/tanja-s_600x600.jpg" alt="Tanja Saiko">
+                            <div class="info">
+                                <h3>Tanja Saiko</h3>
+                                <h4>Sales & Distribution Management</h4>
+                            </div>
+                        </div>
+                    </a>
                 </div>
                 
                 
@@ -539,13 +632,13 @@
     <div class="pure-g">
         <div class="pure-u-1-24 pure-u-sm-1-12 pure-u-lg-1-6">&nbsp;</div>
         <div class="pure-u-11-12 pure-u-sm-5-6 pure-u-lg-2-3">
-            <a class="more-link float-left" href="#">All</a>
+            <a class="more-link float-left" href="/en/team/">All</a>
             <a class="more-link resp-right" href="#">Interested? Apply now and join the cotedo team!</a>
         </div>
     </div>
 </section>
 
-<section id="news">
+<section id="news" class="sec-news">
     <div class="pure-g">
         <div class="pure-u-1-24 pure-u-sm-1-12 pure-u-lg-1-6">&nbsp;</div>
         <div class="pure-u-11-12 pure-u-sm-5-6 pure-u-lg-2-3">
@@ -596,42 +689,58 @@
             </div>
         </div>
     </div>
+    <div class="pure-g">
+        <div class="pure-u-1-24 pure-u-sm-1-12 pure-u-lg-1-6">&nbsp;</div>
+        <div class="pure-u-11-12 pure-u-sm-5-6 pure-u-lg-2-3">
+            <a class="more-link float-left" href="/en/news/">All</a>
+        </div>
+    </div>
 </section>
 
 <footer>
     <div class="pure-g">
         <div class="pure-u-1-24 pure-u-md-1-12">&nbsp;</div>
-        <div class="pure-u-11-12 pure-u-md-5-24">
-            <div class="company-name">cotedo Services GmbH</div>
-            <p>Georg-Muche-Straße 5<br> 80807 Munich, Germany<br> Phone: +49 (0)89 - 716 7797 00<br> Fax: +49 (0)89 - 716 7797 10<br> E-Mail: info@cotedo.de
+        <div class="pure-u-11-12 pure-u-md-5-6">
+            <div class="pure-g">
+                <div class="pure-u-1 pure-u-lg-1-4">
+                    <div class="company-name">cotedo Services GmbH</div>
+                    <p>Georg-Muche-Straße 5<br> 80807 Munich, Germany<br> Phone: +49 (0)89 - 716 7797 00<br> Fax: +49 (0)89 - 716 7797 10<br> E-Mail: info@cotedo.de
 </p>
-        </div>
-        <div class="pure-u-11-12 pure-u-md-6-24">
-            <div class="heading">Strengths</div>
-            <a href="#">Project & Rollout Management</a>
-            <a href="#">Sales & Distribution Management</a>
-            <a href="#">Marketing & Communication</a>
-            <a href="#">Automotive Aftersales Consulting</a>
-        </div>
-        <div class="pure-u-11-12 pure-u-md-4-24">
-            <div class="heading">Info</div>
-            <a href="#">Contact & directions</a>
-            <a href="#">Work at cotedo</a>
-            <a href="#">Downloads</a>
-            <a href="#">Imprint</a>
-        </div>
-        <div class="pure-u-11-12 pure-u-md-5-24">
-            <img src="/assets/img/ic_dekra.png" width="274" height="109">
-            <p>Zertifiziert nach ISO 9001:2015</p>
+                </div>
+                <div class="pure-u-11-12 pure-u-lg-1-3">
+                    <div class="heading">Strengths</div>
+                    <a href="#">Project & Rollout Management</a>
+                    <a href="#">Sales & Distribution Management</a>
+                    <a href="#">Marketing & Communication</a>
+                    <a href="#">Automotive Aftersales Consulting</a>
+                </div>
+                <div class="pure-u-11-12 pure-u-lg-1-6">
+                    <div class="heading">Info</div>
+                    <a href="#">Contact & directions</a>
+                    <a href="#">Work at cotedo</a>
+                    <a href="#">Downloads</a>
+                    <a href="/en/imprint/">Imprint</a>
+                </div>
+                <div class="pure-u-11-12 pure-u-lg-1-4 seal">
+                    <img src="/assets/img/ic_dekra.png" width="274" height="109" class="img-fluid">
+                    <p>Certified to ISO 9001:2015</p>
+                </div>
+
+            </div>
         </div>
     </div>
 </footer>
+<img src="/assets/img/ic_download_a.png" class="preload">
+<img src="/assets/img/ic_more_a.png" class="preload">
+<img src="/assets/img/ic_dropdown_a.png" class="preload">
 
 <!-- Scripts -->
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-<script src="/assets/js/rellax.min.js"></script>
-<script src="/assets/js/countUp.min.js"></script>
-<script src="/assets/js/slick.min.js"></script>
+<script src="/assets/js/helpers.min.js"></script>
+<script src="/assets/js/nav.min.js"></script>
+<script src="/assets/js/vendor/rellax.min.js"></script>
+<script src="/assets/js/vendor/countUp.min.js"></script>
+<script src="/assets/js/vendor/slick.min.js"></script>
 <script src="/assets/js/main.min.js"></script>
 
 <script>

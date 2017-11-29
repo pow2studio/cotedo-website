@@ -7,7 +7,9 @@ $silver: #ddd
 $gray: #777
 $darkGray: #333
 $dark: #465055
+$darkSea: #4e606b
 $orange: #f68712
+$red: #f55
 $blueAsh: #515e7c
 $blueGray: #5a657d
 
@@ -17,6 +19,7 @@ $coverHeight: 82vh
 body
   margin: 0
   padding: 84px 0 0 0
+  color: $darkGray
 
 html, button, input, select, textarea, .pure-g [class *= "pure-u"]
   font-family: 'Open Sans', sans-serif
@@ -42,7 +45,20 @@ p
   color: $darkGray
 
 section
+  position: relative
   width: 100%
+
+a
+  color: $darkGray
+  text-decoration: none
+
+hr
+  height: 0
+  border: none
+  border-bottom: 1px solid $silver
+
+a:hover, a:active, a:focus
+  color: $orange
 
 /* General Styles */
 .full-width
@@ -54,21 +70,50 @@ section
 .pb20
   padding-bottom: 20px
 
-.above
-  z-index: 2
+.mt-4
+  margin-top: 48px
+
+.mb-2
+  margin-bottom: 24px
 
 .float-left
   float: left
 
+.img-float-left
+  float: left
+  margin: 8px 16px 16px 0
+
+@media (max-width: 575px)
+  .img-float-left
+    float: none
+    width: 100%
+
+.img-fluid
+  max-width: 100%
+  height: auto
+
+.preload
+  position: absolute
+  left: -9999px
+
+.mx-auto
+  margin-left: auto
+  margin-right: auto
+
+span.rv
+  unicode-bidi: bidi-override
+  direction: rtl
+
 h2.section-heading
   font-size: 32px
   font-weight: 300
+  line-height: 1.1
   color: $blueAsh
   text-transform: uppercase
   margin-top: 0
 
 /* Shared Elements */
-a.download-link, a.more-link
+.download-link, .more-link
   display: inline-block
   height: 22px
   margin-bottom: 8px
@@ -77,10 +122,10 @@ a.download-link, a.more-link
   text-decoration: none
   color: $blueGray
 
-a.download-link:hover, a.more-link:hover
+.download-link:hover, .more-link:hover
   color: $orange
 
-a.download-link:before, a.more-link:before
+.download-link:before, .more-link:before
   content: ''
   display: inline-block
   position: relative
@@ -89,31 +134,31 @@ a.download-link:before, a.more-link:before
   height: 16px
   margin-right: 6px
 
-a.download-link:before
+.download-link:before
   background: url('/assets/img/ic_download.png') center center / 16px 16px
 
-a.more-link:before
+.more-link:before
   background: url('/assets/img/ic_more.png') center center / 16px 16px
 
-a.download-link:hover:before
+.download-link:hover:before
   background: url('/assets/img/ic_download_a.png') center center / 16px 16px
 
-a.more-link:hover:before
+.more-link:hover:before
   background: url('/assets/img/ic_more_a.png') center center / 16px 16px
 
 .bubble-left
   display: block
-  margin: 0 10px 10px 0
-  width: 600px
-  height: 280px
-  background: url('/assets/img/bg_bubble_left.svg') right 0 top 0
+  margin: 0 4px 10px 0
+  width: 570px
+  height: 266px
+  background: url('/assets/img/bg_bubble_left.svg') right 0 top 0 / 570px 266px
 
 .bubble-right
   display: block
   margin: 0 0 10px 10px
-  width: 600px
-  height: 280px
-  background: url('/assets/img/bg_bubble_right.svg') right 0 top 0
+  width: 570px
+  height: 266px
+  background: url('/assets/img/bg_bubble_right.svg') right 0 top 0 / 570px 266px
 
 .bubble-content
   padding: 30px 50px 30px 30px
@@ -124,11 +169,76 @@ a.more-link:hover:before
     margin: 0
   h1.claim-q
     color: $gray
+    line-height: 1.1
+    margin-bottom: 8px
   h1.claim-a
     color: $blueAsh
 
-/* Sections */
-#nav
+.behind
+  z-index: -2
+
+section.page
+  padding: 48px 0
+
+section.post
+  padding: 48px 0
+
+/* Navbar */
+button.nav-btn
+  display: inline-block
+  width: 24px
+  height: 24px
+  cursor: pointer
+  border: none
+  outline: none
+  transition: transform 200ms
+  margin: 24px 2px 0 0
+
+button.nav-btn:hover
+  transform: scale(1.1)
+
+button.nav-btn.toggle
+  background: url('/assets/img/ic_nav_toggle.png') no-repeat center center / 24px 24px
+
+button.nav-btn.close
+  background: url('/assets/img/ic_nav_close.png') no-repeat center center / 24px 24px
+
+.mobile-nav
+  display: none
+  position: fixed
+  top: 0
+  width: 100%
+  height: 100%
+  background: rgba(255, 255, 255, 0.97)
+  z-index: 10000
+  .header
+    display: flex
+    justify-content: space-between
+    padding: 8px 16px
+  .items
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+    padding-top: 24px
+    a
+      font-size: 18px
+      font-weight: 300
+      text-transform: uppercase
+      margin: 16px 0
+    hr
+      width: 80%
+  .langs
+    margin-top: 24px
+    color: $gray
+    a
+      font-size: 16px
+      color: $gray
+    a.active
+      font-weight: 400
+      color: $darkGray
+
+#navbar
   height: $navBarHeight
   background: $white
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1)
@@ -141,7 +251,9 @@ a.more-link:hover:before
     background: url('/assets/img/cotedo_logo.jpg') center center / 240px 64px no-repeat
   ul.pure-menu-list
     float: right
+    margin-right: 16px
     li a.pure-menu-link
+      position: relative
       font-weight: 300
       padding: 32px 4px 28px
       margin: 0 12px
@@ -152,10 +264,77 @@ a.more-link:hover:before
       color: $blueAsh
       background: transparent
       border-bottom: 2px solid $blueAsh
+  .pure-menu-link:focus
+    background: transparent
+  .nav-btn.toggle
+    float: right
+    margin-right: 18px
+    margin-top: 32px
+    display: none
+  .news-indicator
+    display: none
+    position: absolute
+    top: 26px
+    right: -6px
+    width: 12px
+    height: 12px
+    background: $red
+    border-radius: 50%
 
-#welcome
+button.lang-dd
+  display: inline-block
+  font-size: 14px
+  font-weight: 300
+  text-transform: uppercase
+  margin-left: 16px
+  padding-top: 2px
+  color: $darkSea
+  background: transparent
+  border: none
+  outline: none
+  .dd-arrow
+    display: inline-block
+    width: 16px
+    height: 16px
+    position: relative
+    top: 3px
+    margin-left: 3px
+    background: url('/assets/img/ic_dropdown.png') 0 0 / 16px 16px
+
+button.lang-dd:hover
+  color: $orange
+  .dd-arrow
+    background: url('/assets/img/ic_dropdown_a.png') 0 0 / 16px 16px
+
+ul.lang-chooser
+  display: none
   position: absolute
-  top: $navBarHeight
+  top: 30px
+  right: 0
+  padding: 6px 0
+  font-size: 15px
+  font-weight: 300
+  color: $gray
+  background: $white
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, .15), -1px -1px 4px rgba(0, 0, 0, .1)
+  list-style: none
+  li a
+    display: block
+    width: 100%
+    padding: 6px 24px
+  li a.active
+    font-weight: 400
+    color: $darkGray
+
+@media (max-width: 825px)
+  #navbar
+    ul.pure-menu-list
+      display: none
+    .nav-btn.toggle
+      display: inline-block
+
+.sec-welcome-cover
+  position: relative
   width: 100%
   height: $coverHeight
   background: url('/assets/img/cotedo_cover_01.jpg') left center
@@ -165,17 +344,13 @@ a.more-link:hover:before
 
 #first-bubble
   position: absolute
-  top: calc(#{$navBarHeight} + #{$coverHeight} - 290px)
+  bottom: 10px
 
-#intro
-  position: absolute
-  top: calc(#{$navBarHeight} + #{$coverHeight})
+.sec-welcome
   padding: 48px 0
   background: $white
 
-#stats
-  position: absolute
-  top: 200vh
+.sec-stats
   background: $orange
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15), inset 0 -1px 2px rgba(0, 0, 0, 0.15)
   .kpi
@@ -190,9 +365,7 @@ a.more-link:hover:before
     color: $white
     text-transform: uppercase
 
-#strengths
-  position: absolute
-  top: 300vh
+.sec-strengths
   background: $white
   padding: 48px 0 24px 0
   .box
@@ -249,33 +422,31 @@ a.more-link:hover:before
       transform: scale(1.1)
 
 @media(max-width: 1200px)
-  #strengths .box-links a.more-link
+  .sec-strengths .box-links a.more-link
     float: left
     clear: left
 
 @media(max-width: 1020px)
-  #strengths .box-links a.more-link
+  .sec-strengths .box-links a.more-link
     float: right
     clear: none
 
 @media(max-width: 970px)
-  #strengths .box-links a.more-link
+  .sec-strengths .box-links a.more-link
     float: left
     clear: left
 
 @media(max-width: 768px)
-  #strengths .box-links a.more-link
+  .sec-strengths .box-links a.more-link
     float: right
     clear: none
 
 @media(max-width: 480px)
-  #strengths .box-links a.more-link
+  .sec-strengths .box-links a.more-link
     float: left
     clear: left
 
-#team-cover
-  position: absolute
-  top: 400vh
+.sec-team-cover
   width: 100%
   height: $coverHeight
   background: url('/assets/img/cotedo_cover_02.jpg') center center
@@ -283,14 +454,12 @@ a.more-link:hover:before
 
 #second-bubble
   position: absolute
+  bottom: 10px
   right: 0
-  top: 450vh
   .bubble-content
     padding-left: 140px
 
-#team
-  position: absolute
-  top: 500vh
+.sec-team
   background: $white
   padding: 48px 0
   h2
@@ -298,22 +467,24 @@ a.more-link:hover:before
   .members
     margin-bottom: 16px
     .wrapper
+      display: inline-block
+      text-align: left
       outline: none
     .member
       position: relative
-      width: 220px
-      height: 220px
+      width: 180px
+      height: 180px
       overflow: hidden
       margin: 0 auto
     img
       position: absolute
-      width: 220px
-      height: 220px
+      width: 180px
+      height: 180px
       transition: all 500ms
     .info
       position: absolute
-      width: 220px
-      height: 220px
+      width: 180px
+      height: 180px
       display: flex
       flex-direction: column
       align-items: center
@@ -324,19 +495,46 @@ a.more-link:hover:before
       h3
         font-size: 16px
         font-weight: 400
+        text-align: center
+        padding: 0 4px
         letter-spacing: 1px
         color: white
         margin: 0
         transform: translateY(10px)
         transition: all 500ms
       h4
-        font-size: 12px
+        font-size: 11px
         font-weight: 300
+        text-align: center
         color: white
         transform: translateY(20px)
         transition: all 500ms
+    .member-fluid
+      min-width: 240px
+      max-width: 320px
+      min-height: 240px
+      max-height: 320px
+      width: 25%
+      height: 25%
+      img, .info
+        width: 100%
+        height: 100%
+  .controls
+    margin-bottom: 16px
+  button
+    padding: 4px 10px
+    font-size: 15px
+    font-weight: 300
+    margin: 4px
+    color: $blueAsh
+    background: none
+    border: 1px solid $blueAsh
+    outline: none
+  button:hover, button.mixitup-control-active
+    color: $orange
+    border: 1px solid $orange
+
   .member:hover
-    cursor: pointer
     img
       transform: scale(1.1)
     .info
@@ -358,13 +556,11 @@ a.more-link:hover:before
     float: right
 
 @media(max-width: 468px)
-  #team .resp-right
+  .sec-team .resp-right
     clear: left
     float: left
 
-#news
-  position: absolute
-  top: 600vh
+.sec-news
   background: $lightGray
   padding: 48px 0
   a
@@ -376,23 +572,116 @@ a.more-link:hover:before
       margin-bottom: 20px
     .date
       float: left
-      width: 112px
-      height: 36px
+      width: 75px
+      height: 24px
       padding-left: 10px
-      font-size: 15px
+      font-size: 12px
       font-weight: 300
-      line-height: 36px
+      line-height: 25px
       color: $white
-      background: url('/assets/img/bg_small_bubble_gray.png') 0 0 / 122px 36px no-repeat
+      background: url('/assets/img/bg_small_bubble_gray.png') top 0 right 0 / 112px 36px no-repeat
     .headline
       float: left
       width: calc(100% - 170px)
-      height: 94px
+      height: 106px
       padding: 10px
       font-size: 15px
       font-weight: 300
       background: $white
       color: $darkGray
+
+.sec-news-posts
+  .year
+    font-weight: 300
+    color: $orange
+    margin-top: 0
+  ul.posts
+    list-style: none
+    padding-left: 64px
+    li
+      position: relative
+      min-height: 64px
+      margin-bottom: 16px
+      padding-right: 32px
+      font-weight: 300
+      .date
+        position: absolute
+        top: 0
+        left: -60px
+        min-width: 48px
+        padding: 8px 0
+        text-align: center
+        text-transform: uppercase
+        font-weight: 400
+        line-height: 1.0
+        color: $white
+        background: $blueAsh
+        border-radius: 4px
+      h3
+        margin-bottom: 2px
+      p
+        margin-top: 0
+        color: $blueAsh
+    li a::after
+      content: ''
+      position: absolute
+      top: calc(50% - 24px)
+      right: 0
+      display: block
+      width: 16px
+      height: 48px
+      background: url('/assets/img/ic_big_chevron_right.png') center center / 16px 48px no-repeat
+    li a:hover
+      .date
+        background: $orange
+      p
+        color: $orange
+    li a:hover::after
+      background: url('/assets/img/ic_big_chevron_right_a.png') center center / 16px 48px no-repeat
+
+.post
+  h4
+    font-weight: 300
+    color: $gray
+  .more
+    display: flex
+    justify-content: space-between
+    align-items: center
+  .all-posts
+    margin-bottom: 16px
+    max-width: 20%
+    a
+      img
+        vertical-align: middle
+        margin-right: 4px
+      span
+        font-weight: 300
+  .prev-post, .next-post
+    max-width: 35%
+    min-height: 120px
+    border-left: 1px solid $silver
+    padding: 0 10px
+    margin-bottom: 16px
+    img
+      float: left
+      margin-right: 8px
+    p
+      margin-top: 0
+  a:hover p
+    color: $orange
+
+@media(max-width: 767px)
+  .post
+    .more
+      width: 100%
+      flex-direction: column
+      justify-content: flex-end
+      align-items: flex-start
+    .all-posts
+      max-width: 100%
+    .prev-post, .next-post
+      max-width: 100%
+      border-left: none
 
 footer
   width: 100%
@@ -420,3 +709,11 @@ footer
     color: $orange
   img
     margin-bottom: 16px
+
+@media(max-width: 1023px)
+  footer
+    .heading
+      margin-bottom: 16px
+      margin-top: 32px
+    .seal
+      margin-top: 32px

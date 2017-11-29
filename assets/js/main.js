@@ -1,14 +1,6 @@
 $(document).ready(function () {
   var $window = $(window);
-  var $intro = $('#intro');
-  var $stats = $('#stats');
-  var $strengths = $('#strengths');
-  var $teamCover = $('#team-cover');
-  var $secondBubble = $('#second-bubble');
-  var $team = $('#team');
-  var $members = $('#team .members');
-  var $news = $('#news');
-  var $footer = $('footer');
+  var $members = $('.sec-team .members');
   var counters = $('.countup');
   var countUpFired = false;
   var countUpOpts = { useEasing: true, useGrouping: false };
@@ -19,22 +11,9 @@ $(document).ready(function () {
   function init() {
     initCounters();
     initSlider();
-    updatePositions();
-    new Rellax('.rellax');
+    initParallax();
     $window.scroll(debounce(checkScrollTop, 100));
-    $window.resize(debounce(updatePositions, 100));
     checkScrollTop();
-  }
-
-  function updatePositions() {
-    $stats.css({ top: $intro.position().top + $intro.outerHeight() + 'px' });
-    $strengths.css({ top: $stats.position().top + $stats.outerHeight() + 'px' });
-    $teamCover.css({ top: $strengths.position().top + $strengths.outerHeight() + 'px' });
-    $secondBubble.css({ top: $teamCover.position().top + $teamCover.height() - 290 + 'px ' });
-    $team.css({ top: $teamCover.position().top + $teamCover.height() + 'px' });
-    $news.css({ top: $team.position().top + $team.outerHeight() + 'px' });
-    $footer.css({ position: 'absolute', top: $news.position().top + $news.outerHeight() + 'px' });
-    countUpTrigger = $stats.position().top - $window.height();
   }
 
   function initCounters() {
@@ -47,8 +26,8 @@ $(document).ready(function () {
   }
 
   function initSlider() {
-    $prev = $('#team .slider-prev');
-    $next = $('#team .slider-next');
+    $prev = $('.sec-team .slider-prev');
+    $next = $('.sec-team .slider-next');
     // Randomize the slides
     $members.each(function () {
       $(this).children().sort(function () {
@@ -57,7 +36,7 @@ $(document).ready(function () {
     });
     $members.slick({
       infinite: true,
-      slidesToShow: 3,
+      slidesToShow: 4,
       slidesToScroll: 1,
       prevArrow: $prev,
       nextArrow: $next,
@@ -76,6 +55,10 @@ $(document).ready(function () {
         }
       ]
     });
+  }
+
+  function initParallax() {
+    new Rellax('.rellax');
   }
 
   function startCountUp() {
