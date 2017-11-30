@@ -48,14 +48,14 @@ section
   position: relative
   width: 100%
 
-a
-  color: $darkGray
-  text-decoration: none
-
 hr
   height: 0
   border: none
   border-bottom: 1px solid $silver
+
+a
+  color: $darkGray
+  text-decoration: none
 
 a:hover, a:active, a:focus
   color: $orange
@@ -82,6 +82,17 @@ a:hover, a:active, a:focus
 .img-float-left
   float: left
   margin: 8px 16px 16px 0
+
+.anchor
+  display: block
+  height: 82px
+  margin-top: -82px
+  visibility: hidden
+
+.icon24
+  width: 24px
+  height: 24px
+  vertical-align: middle
 
 @media (max-width: 575px)
   .img-float-left
@@ -179,6 +190,8 @@ h2.section-heading
 
 section.page
   padding: 48px 0
+  ul, li
+    font-weight: 300
 
 section.post
   padding: 48px 0
@@ -260,7 +273,7 @@ button.nav-btn.close
       border-bottom: 2px solid $white
       color: $darkGray
       text-transform: uppercase
-    li a.pure-menu-link:hover
+    li a.pure-menu-link:hover, li a.pure-menu-link.active
       color: $blueAsh
       background: transparent
       border-bottom: 2px solid $blueAsh
@@ -337,7 +350,7 @@ ul.lang-chooser
   position: relative
   width: 100%
   height: $coverHeight
-  background: url('/assets/img/cotedo_cover_01.jpg') left center
+  background: url('/assets/img/cotedo_cover_01.jpg') center center
   background-size: cover
   display: flex
   align-items: flex-end
@@ -351,6 +364,7 @@ ul.lang-chooser
   background: $white
 
 .sec-stats
+  position: relative
   background: $orange
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15), inset 0 -1px 2px rgba(0, 0, 0, 0.15)
   .kpi
@@ -417,7 +431,6 @@ ul.lang-chooser
   .box .box-header .title img
     transition: transform 300ms
   .box:hover
-    cursor: pointer
     .box-header .title img
       transform: scale(1.1)
 
@@ -595,49 +608,54 @@ ul.lang-chooser
     font-weight: 300
     color: $orange
     margin-top: 0
-  ul.posts
-    list-style: none
-    padding-left: 64px
-    li
-      position: relative
-      min-height: 64px
-      margin-bottom: 16px
-      padding-right: 32px
-      font-weight: 300
-      .date
-        position: absolute
-        top: 0
-        left: -60px
-        min-width: 48px
-        padding: 8px 0
-        text-align: center
-        text-transform: uppercase
-        font-weight: 400
-        line-height: 1.0
-        color: $white
-        background: $blueAsh
-        border-radius: 4px
-      h3
-        margin-bottom: 2px
-      p
-        margin-top: 0
-        color: $blueAsh
-    li a::after
-      content: ''
+
+ul.listing
+  list-style: none
+  padding-left: 0
+  li
+    position: relative
+    min-height: 64px
+    margin-bottom: 16px
+    padding-right: 32px
+    font-weight: 300
+    h3
+      margin-bottom: 2px
+    p
+      margin-top: 0
+      color: $blueAsh
+  li a::after
+    content: ''
+    position: absolute
+    top: calc(50% - 24px)
+    right: 0
+    display: block
+    width: 16px
+    height: 48px
+    background: url('/assets/img/ic_big_chevron_right.png') center center / 16px 48px no-repeat
+  li a:hover
+    .date
+      background: $orange
+    p
+      color: $orange
+  li a:hover::after
+    background: url('/assets/img/ic_big_chevron_right_a.png') center center / 16px 48px no-repeat
+
+ul.listing.with-dates
+  padding-left: 64px
+  li
+    .date
       position: absolute
-      top: calc(50% - 24px)
-      right: 0
-      display: block
-      width: 16px
-      height: 48px
-      background: url('/assets/img/ic_big_chevron_right.png') center center / 16px 48px no-repeat
-    li a:hover
-      .date
-        background: $orange
-      p
-        color: $orange
-    li a:hover::after
-      background: url('/assets/img/ic_big_chevron_right_a.png') center center / 16px 48px no-repeat
+      top: 0
+      left: -60px
+      min-width: 48px
+      padding: 8px 0
+      text-align: center
+      text-transform: uppercase
+      font-weight: 400
+      line-height: 1.0
+      color: $white
+      background: $blueAsh
+      border-radius: 4px
 
 .post
   h4
@@ -682,6 +700,13 @@ ul.lang-chooser
     .prev-post, .next-post
       max-width: 100%
       border-left: none
+
+.sec-division
+  position: relative
+  width: 100%
+  height: $coverHeight
+  display: flex
+  align-items: flex-end
 
 footer
   width: 100%

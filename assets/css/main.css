@@ -31,14 +31,14 @@ section {
   position: relative;
   width: 100%; }
 
-a {
-  color: #333;
-  text-decoration: none; }
-
 hr {
   height: 0;
   border: none;
   border-bottom: 1px solid #ddd; }
+
+a {
+  color: #333;
+  text-decoration: none; }
 
 a:hover, a:active, a:focus {
   color: #f68712; }
@@ -65,6 +65,17 @@ a:hover, a:active, a:focus {
 .img-float-left {
   float: left;
   margin: 8px 16px 16px 0; }
+
+.anchor {
+  display: block;
+  height: 82px;
+  margin-top: -82px;
+  visibility: hidden; }
+
+.icon24 {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle; }
 
 @media (max-width: 575px) {
   .img-float-left {
@@ -161,6 +172,8 @@ h2.section-heading {
 
 section.page {
   padding: 48px 0; }
+  section.page ul, section.page li {
+    font-weight: 300; }
 
 section.post {
   padding: 48px 0; }
@@ -242,7 +255,7 @@ button.nav-btn.close {
       border-bottom: 2px solid #fff;
       color: #333;
       text-transform: uppercase; }
-    #navbar ul.pure-menu-list li a.pure-menu-link:hover {
+    #navbar ul.pure-menu-list li a.pure-menu-link:hover, #navbar ul.pure-menu-list li a.pure-menu-link.active {
       color: #515e7c;
       background: transparent;
       border-bottom: 2px solid #515e7c; }
@@ -317,7 +330,7 @@ ul.lang-chooser {
   position: relative;
   width: 100%;
   height: 82vh;
-  background: url("/assets/img/cotedo_cover_01.jpg") left center;
+  background: url("/assets/img/cotedo_cover_01.jpg") center center;
   background-size: cover;
   display: flex;
   align-items: flex-end; }
@@ -331,6 +344,7 @@ ul.lang-chooser {
   background: #fff; }
 
 .sec-stats {
+  position: relative;
   background: #f68712;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15), inset 0 -1px 2px rgba(0, 0, 0, 0.15); }
   .sec-stats .kpi {
@@ -395,10 +409,8 @@ ul.lang-chooser {
       float: right; }
   .sec-strengths .box .box-header .title img {
     transition: transform 300ms; }
-  .sec-strengths .box:hover {
-    cursor: pointer; }
-    .sec-strengths .box:hover .box-header .title img {
-      transform: scale(1.1); }
+  .sec-strengths .box:hover .box-header .title img {
+    transform: scale(1.1); }
 
 @media(max-width: 1200px) {
   .sec-strengths .box-links a.more-link {
@@ -565,34 +577,22 @@ ul.lang-chooser {
   font-weight: 300;
   color: #f68712;
   margin-top: 0; }
-.sec-news-posts ul.posts {
+
+ul.listing {
   list-style: none;
-  padding-left: 64px; }
-  .sec-news-posts ul.posts li {
+  padding-left: 0; }
+  ul.listing li {
     position: relative;
     min-height: 64px;
     margin-bottom: 16px;
     padding-right: 32px;
     font-weight: 300; }
-    .sec-news-posts ul.posts li .date {
-      position: absolute;
-      top: 0;
-      left: -60px;
-      min-width: 48px;
-      padding: 8px 0;
-      text-align: center;
-      text-transform: uppercase;
-      font-weight: 400;
-      line-height: 1;
-      color: #fff;
-      background: #515e7c;
-      border-radius: 4px; }
-    .sec-news-posts ul.posts li h3 {
+    ul.listing li h3 {
       margin-bottom: 2px; }
-    .sec-news-posts ul.posts li p {
+    ul.listing li p {
       margin-top: 0;
       color: #515e7c; }
-  .sec-news-posts ul.posts li a::after {
+  ul.listing li a::after {
     content: "";
     position: absolute;
     top: calc(50% - 24px);
@@ -601,12 +601,28 @@ ul.lang-chooser {
     width: 16px;
     height: 48px;
     background: url("/assets/img/ic_big_chevron_right.png") center center/16px 48px no-repeat; }
-  .sec-news-posts ul.posts li a:hover .date {
+  ul.listing li a:hover .date {
     background: #f68712; }
-  .sec-news-posts ul.posts li a:hover p {
+  ul.listing li a:hover p {
     color: #f68712; }
-  .sec-news-posts ul.posts li a:hover::after {
+  ul.listing li a:hover::after {
     background: url("/assets/img/ic_big_chevron_right_a.png") center center/16px 48px no-repeat; }
+
+ul.listing.with-dates {
+  padding-left: 64px; }
+  ul.listing.with-dates li .date {
+    position: absolute;
+    top: 0;
+    left: -60px;
+    min-width: 48px;
+    padding: 8px 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: 1;
+    color: #fff;
+    background: #515e7c;
+    border-radius: 4px; }
 
 .post h4 {
   font-weight: 300;
@@ -648,6 +664,13 @@ ul.lang-chooser {
   .post .prev-post, .post .next-post {
     max-width: 100%;
     border-left: none; } }
+.sec-division {
+  position: relative;
+  width: 100%;
+  height: 82vh;
+  display: flex;
+  align-items: flex-end; }
+
 footer {
   width: 100%;
   padding: 48px 0;

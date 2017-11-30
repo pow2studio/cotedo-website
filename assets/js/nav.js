@@ -11,6 +11,7 @@ $(document).ready(function () {
   var mobileNavVisible = false;
   var scrollTop = 0;
   var h50 = $window.height() / 2;
+  var isMainPage = false;
 
   function init() {
     initNav();
@@ -31,16 +32,23 @@ $(document).ready(function () {
       $mobileNav.fadeOut();
       mobileNavVisible = false;
     });
-    $('a.pure-menu-link').click(function (event) {
-      var target = this.hash;
-      event.preventDefault();
-      var navOffset = $navbar.height() - 6;
-      if (mobileNavVisible) $mobileNav.fadeOut();
-      return $('html, body').animate({
-        scrollTop: $(this.hash).offset().top - navOffset
-      }, 300, function () {
-        return window.history.pushState(null, null, target);
-      });
+    $('a.pure-menu-link').click(scrollToAnchor);
+    var lang = $navbar.data('lang');
+    var vals = window.location.href.split(lang)[1].split('/');
+    isMainPage = vals.length > 0;
+  }
+
+  function scrollToAnchor(event) {
+    var target = this.hash;
+    var el = $(this.hash);
+    if (!el.length) return;
+    event.preventDefault();
+    var navOffset = 0;
+    if (mobileNavVisible) $mobileNav.fadeOut();
+    return $('html, body').animate({
+      scrollTop: el.offset().top - navOffset
+    }, 300, function () {
+      return window.history.pushState(null, null, target);
     });
   }
 
@@ -50,7 +58,7 @@ $(document).ready(function () {
     $langChooser.css({ display: 'block' });
     $langChooser.hide();
   }
-
+  
   function toggleLangDd() {
     $langChooser.slideToggle(200);
   }

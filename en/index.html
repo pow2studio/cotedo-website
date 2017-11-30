@@ -20,6 +20,7 @@
 
 <body>
 
+
 <nav class="mobile-nav">
     <div class="header">
         <img src="/assets/img/cotedo_logo.jpg" width="240" height="64">
@@ -49,18 +50,30 @@
 </nav>
 
 
-<nav id="navbar" class="navbar pure-menu pure-menu-horizontal pure-menu-fixed">
+
+
+<nav id="navbar" class="navbar pure-menu pure-menu-horizontal pure-menu-fixed" data-gumshoe-header
+     data-lang="en">
     <a class="pure-menu-heading logo" href="/en/">cotedo</a>
-    <ul class="pure-menu-list">
+    <ul class="pure-menu-list" data-gumshoe>
         <li class="pure-menu-item pure-menu-selected">
             <a href="#welcome" class="pure-menu-link">Welcome</a></li>
         <li class="pure-menu-item">
-            <a href="#strengths" class="pure-menu-link">Strengths</a>
+            
+            
+            <a href="#strengths"
+               class="pure-menu-link ">strengths</a>
         </li>
         <li class="pure-menu-item">
-            <a href="#team" class="pure-menu-link">Team</a></li>
+            
+            
+            <a href="#team"
+               class="pure-menu-link ">team</a>
         <li class="pure-menu-item">
-            <a href="#news" class="pure-menu-link">News
+            
+            
+            <a href="#news"
+               class="pure-menu-link ">news
                 <span class="news-indicator" data-latest="2017-08-31 00:00:00 +0200"></span></a>
         </li>
         <li class="pure-menu-item">
@@ -89,13 +102,15 @@
     </div>
 </section>
 
-<section id="welcome" class="sec-welcome">
+<span id="welcome" class="anchor"></span>
+<section class="sec-welcome">
     <div class="pure-g">
         <div class="pure-u-1-24 pure-u-sm-1-12 pure-u-lg-1-6">&nbsp;</div>
         <div class="pure-u-11-12 pure-u-sm-5-6 pure-u-lg-2-3">
             <div class="pure-g">
                 <div class="pure-u-1 pure-u-sm-8-24 pb20">
-                    <img src="/assets/img/team/stefan-g_600x600.jpg" class="full-width">
+                    <img src="/assets/img/team/stefan-g_600x600.jpg" alt="Stefan Gatt"
+                         class="full-width">
                     <h4>Stefan Gatt</h4>
                     <h5>Managing Director</h5>
                 </div>
@@ -113,7 +128,8 @@
     </div>
 </section>
 
-<section id="stats" class="sec-stats">
+<span id="stats" class="anchor"></span>
+<section class="sec-stats">
     <div class="pure-g">
         <div class="pure-u-1-24 pure-u-sm-1-12 pure-u-lg-1-6">&nbsp;</div>
         <div class="pure-u-11-12 pure-u-sm-5-6 pure-u-lg-2-3">
@@ -139,85 +155,94 @@
     </div>
 </section>
 
-<section id="strengths" class="sec-strengths">
+<span id="strengths" class="anchor"></span>
+<section class="sec-strengths">
     <div class="pure-g">
         <div class="pure-u-1-24 pure-u-sm-1-12 pure-u-lg-1-6">&nbsp;</div>
         <div class="pure-u-11-12 pure-u-sm-5-6 pure-u-lg-2-3">
             <h2 class="section-heading">Strengths</h2>
             <div class="pure-g">
-                <div class="pure-u-1 pure-u-md-11-24 box">
-                    <div class="box-header">
-                        <div class="title">
-                            <img src="/assets/img/ic_prm.png" width="112" height="50">
-                            <h3>Project & Rollout Management</h3>
+                <a href="/en/strengths/project-rollout-management/">
+                    <div class="pure-u-1 pure-u-md-11-24 box">
+                        <div class="box-header">
+                            <div class="title">
+                                <img src="/assets/img/ic_prm.png" width="112" height="50">
+                                <h3>Project & Rollout Management</h3>
+                            </div>
+                            <div class="image prm"></div>
                         </div>
-                        <div class="image prm"></div>
-                    </div>
-                    <div class="box-content">
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipiscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquam erat. We analyze and optimize your existing processes and develop strategies to implement your projects.
+                        <div class="box-content">
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipiscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquam erat. We analyze and optimize your existing processes and develop strategies to implement your projects.
 </p>
+                        </div>
+                        <div class="box-links">
+                            <a class="download-link" href="#">Download brochure</a>
+                            <a class="more-link" href="#">Learn more</a>
+                        </div>
                     </div>
-                    <div class="box-links">
-                        <a class="download-link" href="#">Download brochure</a>
-                        <a class="more-link" href="#">Learn more</a>
-                    </div>
-                </div>
+                </a>
                 <div class="pure-u-md-1-24">&nbsp;</div>
-                <div class="pure-u-1 pure-u-md-11-24 box">
-                    <div class="box-header">
-                        <div class="title">
-                            <img src="/assets/img/ic_sdm.png" width="112" height="50">
-                            <h3>Sales & Distribution Management</h3>
+                <a href="/en/strengths/sales-distribution-management/">
+                    <div class="pure-u-1 pure-u-md-11-24 box">
+                        <div class="box-header">
+                            <div class="title">
+                                <img src="/assets/img/ic_sdm.png" width="112" height="50">
+                                <h3>Sales & Distribution Management</h3>
+                            </div>
+                            <div class="image sdm"></div>
                         </div>
-                        <div class="image sdm"></div>
-                    </div>
-                    <div class="box-content">
-                        <p>With a team of seasoned experts cotedo is able to run entire sales processes, such as product consulting, creation of quotations, order management, customer service and coordination of international logistics.
+                        <div class="box-content">
+                            <p>With a team of seasoned experts cotedo is able to run entire sales processes, such as product consulting, creation of quotations, order management, customer service and coordination of international logistics.
 </p>
+                        </div>
+                        <div class="box-links">
+                            <a class="download-link" href="#">Download brochure</a>
+                            <a class="more-link" href="#">Learn more</a>
+                        </div>
                     </div>
-                    <div class="box-links">
-                        <a class="download-link" href="#">Download brochure</a>
-                        <a class="more-link" href="#">Learn more</a>
-                    </div>
-                </div>
+                </a>
             </div>
             <div class="pure-g">
-                <div class="pure-u-1 pure-u-md-11-24 box">
-                    <div class="box-header">
-                        <div class="title">
-                            <img src="/assets/img/ic_com.png" width="112" height="50">
-                            <h3>Marketing & Communication</h3>
+                <a href="/en/strengths/marketing-communications/">
+                    <div class="pure-u-1 pure-u-md-11-24 box">
+                        <div class="box-header">
+                            <div class="title">
+                                <img src="/assets/img/ic_com.png" width="112" height="50">
+                                <h3>Marketing & Communication</h3>
+                            </div>
+                            <div class="image com"></div>
                         </div>
-                        <div class="image com"></div>
-                    </div>
-                    <div class="box-content">
-                        <p>Lorem ipsum dolor sit amet. Our core strengths: Print marketing, online product marketing and public relations. We can also support you with the organization of events and trade fairs. In addition we can run photo and film productions.
+                        <div class="box-content">
+                            <p>Lorem ipsum dolor sit amet. Our core strengths: Print marketing, online product marketing and public relations. We can also support you with the organization of events and trade fairs. In addition we can run photo and film productions.
 </p>
+                        </div>
+                        <div class="box-links">
+                            <a class="download-link" href="#">Download brochure</a>
+                            <a class="more-link" href="#">Learn more</a>
+                        </div>
                     </div>
-                    <div class="box-links">
-                        <a class="download-link" href="#">Download brochure</a>
-                        <a class="more-link" href="#">Learn more</a>
-                    </div>
-                </div>
+                </a>
                 <div class="pure-u-md-1-24">&nbsp;</div>
-                <div class="pure-u-1 pure-u-md-11-24 box">
-                    <div class="box-header">
-                        <div class="title">
-                            <img src="/assets/img/ic_aac.png" width="112" height="50">
-                            <h3>Automotive Aftersales Consulting</h3>
+                <a href="/en/strengths/automotive-aftersales-consulting/">
+                    <div class="pure-u-1 pure-u-md-11-24 box">
+                        <div class="box-header">
+                            <div class="title">
+                                <img src="/assets/img/ic_aac.png" width="112" height="50">
+                                <h3>Automotive Aftersales Consulting</h3>
+                            </div>
+                            <div class="image aac"></div>
                         </div>
-                        <div class="image aac"></div>
-                    </div>
-                    <div class="box-content">
-                        <p>Our team will consult you both from a technical as well as an economic angle. We help you optimize the routines and processes, the shop equipment as well as the overall appearance of your business.
+                        <div class="box-content">
+                            <p>Our team will consult you both from a technical as well as an economic angle. We help you optimize the routines and processes, the shop equipment as well as the overall appearance of your business.
 </p>
+                        </div>
+                        <div class="box-links">
+                            <a class="download-link float-left" href="#">
+                                Download brochure</a>
+                            <a class="more-link" href="#">Learn more</a>
+                        </div>
                     </div>
-                    <div class="box-links">
-                        <a class="download-link float-left" href="#">
-                            Download brochure</a>
-                        <a class="more-link" href="#">Learn more</a>
-                    </div>
-                </div>
+                </a>
             </div>
         </div>
     </div>
@@ -234,7 +259,8 @@
     </div>
 </section>
 
-<section id="team" class="sec-team">
+<span id="team" class="anchor"></span>
+<section class="sec-team">
     <div class="pure-g">
         <div class="pure-u-1-24 pure-u-sm-1-12 pure-u-lg-1-6">&nbsp;</div>
         <div class="pure-u-11-12 pure-u-sm-5-6 pure-u-lg-2-3">
@@ -638,7 +664,8 @@
     </div>
 </section>
 
-<section id="news" class="sec-news">
+<span id="news" class="anchor"></span>
+<section class="sec-news">
     <div class="pure-g">
         <div class="pure-u-1-24 pure-u-sm-1-12 pure-u-lg-1-6">&nbsp;</div>
         <div class="pure-u-11-12 pure-u-sm-5-6 pure-u-lg-2-3">
@@ -709,15 +736,15 @@
                 </div>
                 <div class="pure-u-11-12 pure-u-lg-1-3">
                     <div class="heading">Strengths</div>
-                    <a href="#">Project & Rollout Management</a>
-                    <a href="#">Sales & Distribution Management</a>
-                    <a href="#">Marketing & Communication</a>
-                    <a href="#">Automotive Aftersales Consulting</a>
+                    <a href="/en/strengths/project-rollout-management/">Project & Rollout Management</a>
+                    <a href="/en/strengths/sales-distribution-management/">Sales & Distribution Management</a>
+                    <a href="/en/strengths/marketing-communications/">Marketing & Communication</a>
+                    <a href="/en/strengths/automotive-aftersales-consulting/">Automotive Aftersales Consulting</a>
                 </div>
                 <div class="pure-u-11-12 pure-u-lg-1-6">
                     <div class="heading">Info</div>
-                    <a href="#">Contact & directions</a>
-                    <a href="#">Work at cotedo</a>
+                    <a href="/en/contact-directions/">Contact & Directions</a>
+                    <a href="/en/career/">Work at cotedo</a>
                     <a href="#">Downloads</a>
                     <a href="/en/imprint/">Imprint</a>
                 </div>
@@ -733,11 +760,14 @@
 <img src="/assets/img/ic_download_a.png" class="preload">
 <img src="/assets/img/ic_more_a.png" class="preload">
 <img src="/assets/img/ic_dropdown_a.png" class="preload">
+<img src="/assets/img/ic_big_chevron_left_a.png" class="preload">
+<img src="/assets/img/ic_big_chevron_right_a.png" class="preload">
 
 <!-- Scripts -->
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 <script src="/assets/js/helpers.min.js"></script>
 <script src="/assets/js/nav.min.js"></script>
+<script src="/assets/js/vendor/gumshoe.min.js"></script>
 <script src="/assets/js/vendor/rellax.min.js"></script>
 <script src="/assets/js/vendor/countUp.min.js"></script>
 <script src="/assets/js/vendor/slick.min.js"></script>
