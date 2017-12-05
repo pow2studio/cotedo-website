@@ -76,6 +76,9 @@ a:hover, a:active, a:focus
 .mb-2
   margin-bottom: 24px
 
+a.o50:hover
+  opacity: 0.5
+
 .float-left
   float: left
 
@@ -192,6 +195,8 @@ section.page
   padding: 48px 0
   ul, li
     font-weight: 300
+  a
+    color: $blueAsh
 
 section.post
   padding: 48px 0
@@ -268,15 +273,15 @@ button.nav-btn.close
     li a.pure-menu-link
       position: relative
       font-weight: 300
-      padding: 32px 4px 28px
+      padding: 32px 4px 27px
       margin: 0 12px
-      border-bottom: 2px solid $white
+      border-bottom: 3px solid transparent
       color: $darkGray
       text-transform: uppercase
     li a.pure-menu-link:hover, li a.pure-menu-link.active
       color: $blueAsh
       background: transparent
-      border-bottom: 2px solid $blueAsh
+      border-bottom: 3px solid $blueAsh
   .pure-menu-link:focus
     background: transparent
   .nav-btn.toggle

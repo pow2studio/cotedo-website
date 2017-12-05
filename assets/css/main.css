@@ -59,6 +59,9 @@ a:hover, a:active, a:focus {
 .mb-2 {
   margin-bottom: 24px; }
 
+a.o50:hover {
+  opacity: 0.5; }
+
 .float-left {
   float: left; }
 
@@ -174,6 +177,8 @@ section.page {
   padding: 48px 0; }
   section.page ul, section.page li {
     font-weight: 300; }
+  section.page a {
+    color: #515e7c; }
 
 section.post {
   padding: 48px 0; }
@@ -250,15 +255,15 @@ button.nav-btn.close {
     #navbar ul.pure-menu-list li a.pure-menu-link {
       position: relative;
       font-weight: 300;
-      padding: 32px 4px 28px;
+      padding: 32px 4px 27px;
       margin: 0 12px;
-      border-bottom: 2px solid #fff;
+      border-bottom: 3px solid transparent;
       color: #333;
       text-transform: uppercase; }
     #navbar ul.pure-menu-list li a.pure-menu-link:hover, #navbar ul.pure-menu-list li a.pure-menu-link.active {
       color: #515e7c;
       background: transparent;
-      border-bottom: 2px solid #515e7c; }
+      border-bottom: 3px solid #515e7c; }
   #navbar .pure-menu-link:focus {
     background: transparent; }
   #navbar .nav-btn.toggle {
