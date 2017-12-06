@@ -12,9 +12,11 @@ $(document).ready(function () {
   var scrollTop = 0;
   var h50 = $window.height() / 2;
   var isMainPage = false;
+  var lang = '';
 
   function init() {
     initNav();
+    initCookieConsent();
     initLangDd();
     checkNews();
     if ($newsSection.length) {
@@ -32,10 +34,29 @@ $(document).ready(function () {
       $mobileNav.fadeOut();
       mobileNavVisible = false;
     });
-    $('a.pure-menu-link').click(scrollToAnchor);
-    var lang = $navbar.data('lang');
+    $('a.nav-link').click(scrollToAnchor);
+    lang = $navbar.data('lang') || 'de';
     var vals = window.location.href.split(lang)[1].split('/');
     isMainPage = vals.length > 0;
+  }
+
+  function initCookieConsent() {
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#ffffff",
+          "text": "#000000"
+        },
+        "button": {
+          "background": "#515e7c"
+        }
+      },
+      "content": {
+        "message": msgs[lang].cookie,
+        "dismiss": msgs[lang].ok,
+        "link": msgs[lang].learnMore
+      }
+    });
   }
 
   function scrollToAnchor(event) {
@@ -58,7 +79,7 @@ $(document).ready(function () {
     $langChooser.css({ display: 'block' });
     $langChooser.hide();
   }
-  
+
   function toggleLangDd() {
     $langChooser.slideToggle(200);
   }
@@ -78,3 +99,16 @@ $(document).ready(function () {
 
   init();
 });
+
+var msgs = {
+  de: {
+    cookie: 'Diese Webseite verwendet Cookies um Ihr Nutzungserlebnis zu verbessern.',
+    ok: 'OK',
+    learnMore: 'Mehr erfahren'
+  },
+  en: {
+    cookie: 'This website uses cookies to improve your user experience.',
+    ok: 'Got it',
+    learnMore: 'Learn more'
+  }
+};

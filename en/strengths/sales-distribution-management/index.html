@@ -16,6 +16,8 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
 </head>
 
 <body>
@@ -27,13 +29,14 @@
         <button class="nav-btn close"></button>
     </div>
     <div class="items">
-        <a href="/en/#welcome">Welcome</a>
+        <a href="/en/#welcome" class="nav-link">Welcome</a>
         <hr>
-        <a href="/en/#strengths">Strengths</a>
+        <a href="/en/#strengths" class="nav-link">
+            Strengths</a>
         <hr>
-        <a href="/en/#team">Team</a>
+        <a href="/en/#team" class="nav-link">Team</a>
         <hr>
-        <a href="/en/#news">News</a>
+        <a href="/en/#news" class="nav-link">News</a>
         <div class="langs">
             <hr>
             <a class="active" href="#">English</a>
@@ -59,23 +62,27 @@
     <a class="pure-menu-heading logo" href="/en/">cotedo</a>
     <ul class="pure-menu-list" data-gumshoe>
         <li class="pure-menu-item pure-menu-selected">
-            <a href="/en/#welcome" class="pure-menu-link">Welcome</a></li>
+            <a href="/en/#welcome" class="pure-menu-link nav-link">
+                Welcome</a></li>
         <li class="pure-menu-item">
             
             
             <a href="/en/#strengths"
-               class="pure-menu-link active">strengths</a>
+               class="pure-menu-link nav-link active">
+                strengths</a>
         </li>
         <li class="pure-menu-item">
             
             
             <a href="/en/#team"
-               class="pure-menu-link ">team</a>
+               class="pure-menu-link nav-link ">
+                team</a>
         <li class="pure-menu-item">
             
             
             <a href="/en/#news"
-               class="pure-menu-link ">news
+               class="pure-menu-link nav-link ">
+                news
                 <span class="news-indicator" data-latest="2017-08-31 00:00:00 +0200"></span></a>
         </li>
         <li class="pure-menu-item">
@@ -97,9 +104,11 @@
     <button class="nav-btn toggle"></button>
 </nav>
 
-<section class="sec-division behind"
-         style=" background: url('/assets/img/cotedo_cover_04.jpg') center center; background-size: cover;">
-    <div id="first-bubble" class="bubble-left rellax" data-rellax-speed="-4">
+<section class="sec-division-cover behind"
+         style=" background: url('/assets/img/cotedo_cover_10.jpg') center center; background-size: cover;">
+    <img src="/assets/img/ic_sdm.png" width="112" height="50"
+         class="img-acronym">
+    <div class="bubble-left rellax" data-rellax-speed="-4">
         <div class="bubble-content">
             <h1 class="claim-q">Your sales process?</h1>
             <h1 class="claim-a">In good hands!</h1>
@@ -111,18 +120,17 @@
 
 
 <span id="about" class="anchor"></span>
-<section class="sec-welcome">
+<section class="sec-division">
     <div class="pure-g">
         <div class="pure-u-1-24 pure-u-xl-1-12">&nbsp;</div>
         <div class="pure-u-11-12 pure-u-xl-5-6">
-            <div class="pure-g">
-                <div class="pure-u-1 pure-u-md-1-4 pb20">
-                    <img src="/assets/img/team/carolin-j_600x600.jpg" alt="carolinjunghans" class="full-width">
+            <div class="division-row">
+                <div class="column pb20">
+                    <img src="/assets/img/team/carolin-j_600x600.jpg" alt="carolinjunghans" class="img-manager">
                     <h4>Carolin Junghans</h4>
                     <h5>Head of Sales & Distribution Management</h5>
                 </div>
-                <div class="pure-u-md-1-24">&nbsp;</div>
-                <div class="pure-u-1 pure-u-md-10-24 pb20">
+                <div class="content pb20">
                     <h2>We take over the complete sales process for you, from providing first product information to fulfilling delivery.
 </h2>
                     <p>Sales is a sensitive interface in every company.
@@ -130,13 +138,14 @@
                     <p>This is where your customers and your company get into direct contact. Smooth sales procedures are essential for your brand image. With a team of experienced experts, cotedo takes charge of your entire sales process. We supply information on your products, issue quotes, and provide order management, customer service and international logistics for you. The entire range of commercial services, including process and problem management plus monitoring, are set parts of our integral concept.
 </p>
                 </div>
-                <div class="pure-u-md-1-24">&nbsp;</div>
-                <div class="pure-u-1 pure-u-md-1-4">
-                    <a href="">
+                <div class="column">
+                    
+                    <a href="/downloads/de/cotedo_SDM.pdf" target="_blank">
                         <img src="/assets/img/img_brochure_sdm.jpg"
-                             class="full-width">
+                             class="img-brochure">
                     </a>
-                    <p><a class="download-link" href="#">Download brochure</a></p>
+                    <p><a class="download-link" href="/downloads/de/cotedo_SDM.pdf"
+                          target="_blank">Download brochure</a></p>
                 </div>
             </div>
         </div>
@@ -145,32 +154,39 @@
         <div class="pure-u-1-24 pure-u-xl-1-12">&nbsp;</div>
         <div class="pure-u-11-12 pure-u-xl-5-6">
             <hr class="mb-2">
-            <div class="pure-g">
-                <div class="pure-u-1 pure-u-sm-1-4">
-                    <p>More strengths:</p>
-                </div>
+            <div class="pure-g strengths">
                 
                 
-                
-                <div class="pure-u-1 pure-u-sm-1-4 mb-2">
+                <div class="pure-u-1 pure-u-sm-1-4 mb-2 text-center">
+                    
                     <a href="/en/strengths/automotive-aftersales-consulting/" class="o50">
                         <img src="/assets/img/ic_aac_d.png" width="112" height="50">
                     </a>
+                    
                 </div>
                 
+                <div class="pure-u-1 pure-u-sm-1-4 mb-2 text-center">
+                    
+                    <a href="/en/strengths/sales-distribution-management/" class="active">
+                        <img src="/assets/img/ic_sdm.png" width="112" height="50">
+                    </a>
+                    
+                </div>
                 
-                
-                <div class="pure-u-1 pure-u-sm-1-4 mb-2">
+                <div class="pure-u-1 pure-u-sm-1-4 mb-2 text-center">
+                    
                     <a href="/en/strengths/project-rollout-management/" class="o50">
                         <img src="/assets/img/ic_prm_d.png" width="112" height="50">
                     </a>
+                    
                 </div>
                 
-                
-                <div class="pure-u-1 pure-u-sm-1-4 mb-2">
+                <div class="pure-u-1 pure-u-sm-1-4 mb-2 text-center">
+                    
                     <a href="/en/strengths/marketing-communications/" class="o50">
                         <img src="/assets/img/ic_com_d.png" width="112" height="50">
                     </a>
+                    
                 </div>
                 
             </div>
@@ -226,6 +242,7 @@
 <script src="/assets/js/division.min.js"></script>
 <script>
     (function (i, s, o, g, r, a, m) {
+        if (location.hostname === "localhost") return;
         i['GoogleAnalyticsObject'] = r;
         i[r] = i[r] || function () {
                     (i[r].q = i[r].q || []).push(arguments)
@@ -236,7 +253,7 @@
         a.src = g;
         m.parentNode.insertBefore(a, m)
     })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-    ga('create', '', 'auto');
+    ga('create', 'UA-110803381-2', 'auto');
     ga('send', 'pageview');
 </script>
 
