@@ -12,7 +12,6 @@ $(document).ready(function () {
     initCounters();
     initSlider();
     initScrollSpy();
-    initParallax();
     $window.scroll(debounce(checkScrollTop, 100));
     checkScrollTop();
   }
@@ -60,10 +59,6 @@ $(document).ready(function () {
 
   function initScrollSpy() {
     gumshoe.init();
-  }
-
-  function initParallax() {
-    new Rellax('.rellax');
   }
 
   function startCountUp() {
