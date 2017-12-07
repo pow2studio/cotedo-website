@@ -47,7 +47,7 @@ p
 section, footer
   position: relative
   width: 100%
-  max-width: 1280px
+  max-width: 1440px
   margin: 0 auto
 
 hr
@@ -387,11 +387,7 @@ ul.lang-chooser
       display: inline-block
 
 .sec-welcome-cover
-  position: relative
-  width: 100%
-  height: $coverHeight
   background: url('/assets/img/cotedo_cover_01.jpg') center center
-  background-size: cover
   display: flex
   align-items: flex-end
 
@@ -516,10 +512,7 @@ ul.lang-chooser
       flex-direction: column
 
 .sec-team-cover
-  width: 100%
-  height: $coverHeight
   background: url('/assets/img/cotedo_cover_02.jpg') center center
-  background-size: cover
 
 #second-bubble
   position: absolute
@@ -756,9 +749,6 @@ ul.listing.with-dates
       border-left: none
 
 .sec-division-cover
-  position: relative
-  width: 100%
-  height: $coverHeight
   display: flex
   align-items: flex-end
   .img-acronym
@@ -794,6 +784,16 @@ ul.listing.with-dates
     .column
       padding-left: 24px
       padding-right: 24px
+
+.cover
+  position: relative
+  width: 100%
+  height: $coverHeight
+  background-size: cover
+
+@media(min-width: 1300px)
+  .cover
+    height: calc(#{$coverHeight} * 0.66)
 
 footer
   width: 100%

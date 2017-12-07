@@ -30,7 +30,7 @@ p {
 section, footer {
   position: relative;
   width: 100%;
-  max-width: 1280px;
+  max-width: 1440px;
   margin: 0 auto; }
 
 hr {
@@ -365,11 +365,7 @@ ul.lang-chooser {
   #navbar .nav-btn.toggle {
     display: inline-block; } }
 .sec-welcome-cover {
-  position: relative;
-  width: 100%;
-  height: 82vh;
   background: url("/assets/img/cotedo_cover_01.jpg") center center;
-  background-size: cover;
   display: flex;
   align-items: flex-end; }
 
@@ -484,10 +480,7 @@ ul.lang-chooser {
   .sec-strengths .box-links {
     flex-direction: column; } }
 .sec-team-cover {
-  width: 100%;
-  height: 82vh;
-  background: url("/assets/img/cotedo_cover_02.jpg") center center;
-  background-size: cover; }
+  background: url("/assets/img/cotedo_cover_02.jpg") center center; }
 
 #second-bubble {
   position: absolute;
@@ -714,9 +707,6 @@ ul.listing.with-dates {
     max-width: 100%;
     border-left: none; } }
 .sec-division-cover {
-  position: relative;
-  width: 100%;
-  height: 82vh;
   display: flex;
   align-items: flex-end; }
   .sec-division-cover .img-acronym {
@@ -750,6 +740,15 @@ ul.listing.with-dates {
   .sec-division .column {
     padding-left: 24px;
     padding-right: 24px; } }
+.cover {
+  position: relative;
+  width: 100%;
+  height: 82vh;
+  background-size: cover; }
+
+@media(min-width: 1300px) {
+  .cover {
+    height: calc(82vh * 0.66); } }
 footer {
   width: 100%;
   padding: 48px 0;
