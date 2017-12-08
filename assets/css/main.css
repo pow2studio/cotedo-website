@@ -758,6 +758,19 @@ ul.listing.with-dates {
   .sec-division .column {
     padding-left: 24px;
     padding-right: 24px; } }
+.sec-downloads .download {
+  display: inline-block;
+  width: 33%;
+  margin: 16px 0; }
+  .sec-downloads .download .thumbnail {
+    display: block;
+    margin-bottom: 8px; }
+    .sec-downloads .download .thumbnail img {
+      box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.15);
+      transition: transform 400ms; }
+    .sec-downloads .download .thumbnail img:hover {
+      transform: scale(1.05); }
+
 .cover {
   position: relative;
   width: 100%;
