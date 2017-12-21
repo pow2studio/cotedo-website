@@ -75,7 +75,7 @@ a.o50:hover {
   margin: 8px 16px 16px 0; }
 
 .img-news {
-  max-width: 320px; }
+  max-width: 420px; }
 
 .anchor {
   display: block;
@@ -613,9 +613,14 @@ ul.lang-chooser {
     text-decoration: none; }
   .sec-news .newsbox {
     padding-right: 20px; }
-    .sec-news .newsbox img {
+    .sec-news .newsbox .image {
       float: left;
+      width: 150px;
+      height: 150px;
+      overflow: hidden;
       margin-bottom: 20px; }
+      .sec-news .newsbox .image img {
+        max-height: 150px; }
     .sec-news .newsbox .date {
       float: left;
       width: 75px;
