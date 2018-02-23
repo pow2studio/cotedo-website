@@ -110,10 +110,6 @@ a.o50:hover {
   vertical-align: middle;
 }
 
-.dn {
-  display: none !important;
-}
-
 @media (max-width: 575px) {
   .img-float-left {
     float: none;
