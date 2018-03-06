@@ -68,8 +68,18 @@ a:hover, a:active, a:focus {
   text-align: center;
 }
 
+.center-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .pb20 {
   padding-bottom: 20px;
+}
+
+.mt-2 {
+  margin-top: 24px;
 }
 
 .mt-4 {
@@ -305,6 +315,29 @@ section.page a {
 
 section.post {
   padding: 48px 0;
+}
+
+.slider-prev, .slider-next {
+  height: 180px;
+  overflow: hidden;
+  transition: transform 200ms;
+}
+
+.slider-prev {
+  background: url("/assets/img/ic_slider_arrow_left.png") center center/24px 48px no-repeat;
+}
+
+.slider-next {
+  background: url("/assets/img/ic_slider_arrow_right.png") center center/24px 48px no-repeat;
+}
+
+.slider-prev[aria-disabled="true"], .slider-next[aria-disabled="true"] {
+  opacity: 0.5;
+}
+
+.slider-prev[aria-disabled="false"]:hover, .slider-next[aria-disabled="false"]:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 /* Navbar */
@@ -805,25 +838,6 @@ ul.lang-chooser li a.active {
   transform: translateY(0);
 }
 
-.sec-team .slider-prev, .sec-team .slider-next {
-  height: 220px;
-  overflow: hidden;
-  transition: transform 200ms;
-}
-
-.sec-team .slider-prev {
-  background: url("/assets/img/ic_slider_arrow_left.png") center center/24px 48px no-repeat;
-}
-
-.sec-team .slider-next {
-  background: url("/assets/img/ic_slider_arrow_right.png") center center/24px 48px no-repeat;
-}
-
-.sec-team .slider-prev:hover, .sec-team .slider-next:hover {
-  cursor: pointer;
-  transform: scale(1.1);
-}
-
 .sec-team .resp-right {
   float: right;
 }
@@ -835,27 +849,34 @@ ul.lang-chooser li a.active {
   }
 }
 
-.sec-news {
-  background: #f5f5f5;
-  padding: 48px 0;
-}
-
-.sec-news a {
+.news a {
   text-decoration: none;
 }
 
-.sec-news .newsbox {
+.news .wrapper {
+  display: inline-block;
+  text-align: left;
+  outline: none;
+}
+
+.news .news-item {
+  position: relative;
+  min-width: 280px;
+  height: 150px;
+}
+
+.news .newsbox {
   padding-right: 20px;
   margin-bottom: 16px;
 }
 
-.sec-news .newsbox .image {
+.news .newsbox .image {
   float: left;
   width: 150px;
   height: 150px;
 }
 
-.sec-news .newsbox .date {
+.news .newsbox .date {
   float: left;
   width: 75px;
   height: 24px;
@@ -867,15 +888,24 @@ ul.lang-chooser li a.active {
   background: url("/assets/img/bg_small_bubble_gray.png") top 0 right 0/112px 36px no-repeat;
 }
 
-.sec-news .newsbox .headline {
+.news .newsbox .headline {
   float: left;
   width: calc(100% - 170px);
   height: 106px;
   padding: 10px;
   font-size: 15px;
   font-weight: 300;
-  background: #fff;
+  background: #fafafa;
   color: #333;
+}
+
+.sec-news {
+  background: #f5f5f5;
+  padding: 48px 0;
+}
+
+.sec-news .newsbox .headline {
+  background: #fff;
 }
 
 .sec-news-posts .year {

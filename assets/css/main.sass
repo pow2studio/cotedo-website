@@ -73,8 +73,16 @@ a:hover, a:active, a:focus
 .text-center
   text-align: center
 
+.center-center
+  display: flex
+  justify-content: center
+  align-items: center
+
 .pb20
   padding-bottom: 20px
+
+.mt-2
+  margin-top: 24px
 
 .mt-4
   margin-top: 48px
@@ -256,6 +264,20 @@ section.page
 
 section.post
   padding: 48px 0
+
+.slider-prev, .slider-next
+  height: 180px
+  overflow: hidden
+  transition: transform 200ms
+.slider-prev
+  background: url('/assets/img/ic_slider_arrow_left.png') center center / 24px 48px no-repeat
+.slider-next
+  background: url('/assets/img/ic_slider_arrow_right.png') center center / 24px 48px no-repeat
+.slider-prev[aria-disabled="true"], .slider-next[aria-disabled="true"]
+  opacity: 0.5
+.slider-prev[aria-disabled="false"]:hover, .slider-next[aria-disabled="false"]:hover
+  cursor: pointer
+  transform: scale(1.1)
 
 /* Navbar */
 button.nav-btn
@@ -622,17 +644,6 @@ ul.lang-chooser
       opacity: 1
       h3, h4
         transform: translateY(0)
-  .slider-prev, .slider-next
-    height: 220px
-    overflow: hidden
-    transition: transform 200ms
-  .slider-prev
-    background: url('/assets/img/ic_slider_arrow_left.png') center center / 24px 48px no-repeat
-  .slider-next
-    background: url('/assets/img/ic_slider_arrow_right.png') center center / 24px 48px no-repeat
-  .slider-prev:hover, .slider-next:hover
-    cursor: pointer
-    transform: scale(1.1)
   .resp-right
     float: right
 
@@ -641,11 +652,17 @@ ul.lang-chooser
     clear: left
     float: left
 
-.sec-news
-  background: $lightGray
-  padding: 48px 0
+.news
   a
     text-decoration: none
+  .wrapper
+    display: inline-block
+    text-align: left
+    outline: none
+  .news-item
+    position: relative
+    min-width: 280px
+    height: 150px
   .newsbox
     padding-right: 20px
     margin-bottom: 16px
@@ -670,8 +687,14 @@ ul.lang-chooser
       padding: 10px
       font-size: 15px
       font-weight: 300
-      background: $white
+      background: $dirtyWhite
       color: $darkGray
+
+.sec-news
+  background: $lightGray
+  padding: 48px 0
+  .newsbox .headline
+    background: $white
 
 .sec-news-posts
   .year
