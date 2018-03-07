@@ -897,6 +897,7 @@ ul.lang-chooser li a.active {
   font-weight: 300;
   background: #fafafa;
   color: #333;
+  overflow: hidden;
 }
 
 .sec-news {
