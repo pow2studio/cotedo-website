@@ -51,12 +51,12 @@ hr {
 }
 
 a {
-  color: #333;
+  color: #f68712;
   text-decoration: none;
 }
 
 a:hover, a:active, a:focus {
-  color: #f68712;
+  color: #e4783d;
 }
 
 /* General Styles */
