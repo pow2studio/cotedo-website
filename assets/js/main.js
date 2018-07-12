@@ -9,20 +9,15 @@ $(document).ready(function () {
   var scrollTop = 0;
 
   function init() {
-    initCounters();
+    initCards();
     initSlider();
     initScrollSpy();
     $window.scroll(debounce(checkScrollTop, 100));
     checkScrollTop();
   }
 
-  function initCounters() {
-    counters.each(function (i) {
-      var id = 'cu' + i;
-      var val = parseInt($(this).text());
-      $(this).attr('id', id);
-      $(this).data('counter', new CountUp(id, 0, val, 0, countUpDuration, countUpOpts));
-    });
+  function initCards() {
+    $(".card").flip({ axis: 'x', trigger: 'hover' });
   }
 
   function initSlider() {
