@@ -12,6 +12,7 @@
     <link rel="icon" href="/assets/img/favicon.ico" sizes="16x16 24x24 32x32 48x48 64x64" type="image/vnd.microsoft.icon">
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
     <link href="/assets/css/main.css" rel="stylesheet">
     
     <!--[if lt IE 9]>
@@ -210,8 +211,26 @@ unserem Unternehmens langfristig verbunden und können so nachhaltig zum Firmene
     </div>
 </footer>
 
+<div id="contact" class="modal pt-2 pb-2">
+  <h2 class="section-heading">Kontakt</h2>
+  <p>Sie erreichen uns werktags von 9 bis 18 Uhr unter:</p>
+  <h3 class="ml-1"><i class="ic phone"></i> +49 (0)89 7167797 00</h3>
+  <p>Oder schreiben Sie uns eine Nachricht:</p>
+  <form>
+      <fieldset>
+          <input type="name" placeholder="Name">
+          <input type="email" placeholder="E-Mail-Adresse">
+          <textarea placeholder="Nachricht..."></textarea>
+      </fieldset>
+      <button type="submit" class="pure-button"><i class="ic envelope mr-1"></i>Senden</button>
+  </form>
+</div>
+
+<a href="#contact" class="contact-button" rel="modal:open"></a>
+
 <!-- Scripts -->
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
 <script src="/assets/js/helpers.min.js"></script>
 <script src="/assets/js/nav.min.js"></script>
 
