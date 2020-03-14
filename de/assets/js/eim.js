@@ -18,7 +18,6 @@ $(document).ready(function () {
     $dialog.click(function (e) { e.stopImmediatePropagation(); });
     $eim.click(switchOffEIM);
     $form.submit(submitForm);
-    showEIM();
   }
 
   function submitForm(e) {
