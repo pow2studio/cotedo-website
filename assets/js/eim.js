@@ -6,7 +6,6 @@ $(document).ready(function () {
   var $form = $('#wpform');
   var $olSuccess = $('.ol.success');
   var $olError = $('.ol.error');
-  var modalCreated = false;
 
   function init() {
     initEIM();
@@ -26,7 +25,7 @@ $(document).ready(function () {
     var gender = $('input[name="gender"]:checked').val();
     var lastName = $('#lastName').val();
     var email = $('#email').val();
-    var url = r('uggcf://n727nsq9.fvosbezf.pbz/freir/ZHVRNZ5NxcjWl67Qyr_qUrA_utP3OJbL75RsfRwgLkr2RnFnBNI4dcNMU81XAtp-M45FvS13hpfLOn4gHc-AHL0At4yd8GFA4MZK3BkvQTQ9-ij4wsdwfDL_mIQ9K2LHt7UcrbswQvrhbxbLcvqp4QlNlHHCNT-oryjNzDHCERH1wtnmrPCH2FTcCtWpl1GG18iA1BWwmyz0oqUm');
+    var url = r('uggcf://n727nsq9.fvosbezf.pbz/freir/ZHVRNB3sqbYEAupb5mGqKSHh7NWepeXS6Gv59xgaJexnBHVu2XIIwKcw5GT1kKhJ6HsWJ8CI3EFK0LgGsMB_9X-D1gfTsre2D_g9E0-hntKaqmWmeWcbK0HY_04v8iba8WEpL-qFEP8nmR0DBTAq5Yb2U_aFLwDpVfl8ZMiMM7lRsU90jkUvmpOKiJr1GjBo6m6jk6yMQ6r8aqrt');
     setLoading(true);
     $.ajax({
       type: 'POST',
