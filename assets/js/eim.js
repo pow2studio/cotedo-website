@@ -4,6 +4,7 @@ $(document).ready(function () {
   var $dialog = $('.eim-dialog');
   var $closeBtn = $('.eim-dialog .close');
   var $form = $('#wpform');
+  var $captchaErr = $('#captcha-error');
   var $olSuccess = $('.ol.success');
   var $olError = $('.ol.error');
 
@@ -21,19 +22,23 @@ $(document).ready(function () {
 
   function submitForm(e) {
     e.preventDefault();
-    var GM = { m: 1, f: 2 }
-    var gender = $('input[name="gender"]:checked').val();
-    var lastName = $('#lastName').val();
-    var email = $('#email').val();
-    var url = r('uggcf://n727nsq9.fvosbezf.pbz/freir/ZHVRNB3sqbYEAupb5mGqKSHh7NWepeXS6Gv59xgaJexnBHVu2XIIwKcw5GT1kKhJ6HsWJ8CI3EFK0LgGsMB_9X-D1gfTsre2D_g9E0-hntKaqmWmeWcbK0HY_04v8iba8WEpL-qFEP8nmR0DBTAq5Yb2U_aFLwDpVfl8ZMiMM7lRsU90jkUvmpOKiJr1GjBo6m6jk6yMQ6r8aqrt');
+    var res = $('#captcha-response').val();
+    if (!res) {
+      $captchaErr.addClass('visible');
+      return;
+    }
+    var data = $form.serialize();
+    var url = r('uggcf://n727nsq9.fvosbezf.pbz/freir/ZHVRNRbTAoOADQe6WVCJjhYrwXKLDzGZJfIssvnlAop-VDaU7vVW_z9y6o6tDET3FuUtjfK6GBJwJUJY4u7QEM4rfq-0bBd5GTUobhuMvpybuKsaid_pdD20kemvzJeytaBj8p-GViK_zAKezuR8mR5KEPGuTKDmY4a8KR5KnLtLAhmNA3CMdagML76yIkHFw9xgkbgl66js_yxN?vfNwnk=1');
     setLoading(true);
-    $.ajax({
+    var req = {
       type: 'POST',
       url: url,
-      data: { GESCHLECHT: GM[gender], NAME: lastName, EMAIL: email },
+      data: data,
+      dataType: 'json',
       success: reportSuccess,
       error: reportError,
-    });
+    };
+    $.ajax(req);
   }
 
   function setLoading(loading) {
@@ -53,7 +58,7 @@ $(document).ready(function () {
   function reportSuccess() {
     setLoading(false);
     $olSuccess.addClass('visible');
-    setTimeout(hideEIM, 3500);
+    setTimeout(switchOffEIM.bind(null, 365), 3500);
   }
 
   function reportError() {

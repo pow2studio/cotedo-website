@@ -93,7 +93,7 @@
                class="pure-menu-link nav-link active">
                 aktuelles
                 <span class="news-indicator"
-                      data-latest="2020-03-04"></span></a>
+                      data-latest="2020-07-03"></span></a>
         </li>
         <li class="pure-menu-item">
             <button class="lang-dd">de<span class="dd-arrow"></span></button>
@@ -123,7 +123,9 @@
             <p>cotedo hält Gastvorlesung für Studierende der Automobilwirtschaft</p>
 
 
+            
             <img src="/assets/img/news/geislingen.jpg" class="img-float-left img-news">
+            
             
 
 <p>Am 10. April 2019 hält unser Automotive-Experte Dennis Hartmann eine Gastvorlesung im Fach Automobilwirtschaft an der Hochschule für Wirtschaft und Umwelt Nürtingen-Geislingen. Auf Einladung des Branchen-Weisen Prof. Hannes Brachat präsentieren wir unsere Vision der „Werkstatt der Zukunft“: Wir erklären, wie sich Autohäuser neue Ertragspotenziale erschließen, indem sie neue Technologien wie Elektromobilität und Digitalisierung als Chance begreifen und für sich nutzen.</p>
@@ -150,7 +152,7 @@ Sie erreichen uns telefonisch unter +49 (0)89 716 77 97 00 und per Mail: <a href
         <div class="pure-u-11-12 pure-u-sm-5-6 pure-u-lg-2-3">
             <div class="more">
                 <div class="all-posts">
-                    <a href="/aktuelles/">
+                    <a href="/de/aktuelles/">
                         <img src="/assets/img/ic_big_chevron_left.png" width="16">
                         <span>Alle Neuigkeiten</span>
                     </a>
@@ -188,18 +190,17 @@ Sie erreichen uns telefonisch unter +49 (0)89 716 77 97 00 und per Mail: <a href
                 </div>
                 <div class="pure-u-11-12 pure-u-lg-1-3">
                     <div class="heading">Kompetenzen</div>
-                    <a href="/kompetenzen/automotive-aftersales-consulting/">Automotive Aftersales Consulting</a>
-                    <a href="/kompetenzen/sales-distribution-management/">Sales & Distribution Management</a>
-                    <a href="/kompetenzen/project-rollout-management/">Project & Rollout Management</a>
-                    <a href="/kompetenzen/marketing-kommunikation/">Marketing & Kommunikation</a>
+                    <a href="/de/kompetenzen/automotive-aftersales-consulting/">Automotive Aftersales Consulting</a>
+                    <a href="/de/kompetenzen/sales-distribution-management/">Sales & Distribution Management</a>
+                    <a href="/de/kompetenzen/marketing-kommunikation/">Marketing & Kommunikation</a>
                 </div>
                 <div class="pure-u-11-12 pure-u-lg-1-6">
                     <div class="heading">Info</div>
-                    <a href="/kontakt-anfahrt/">Kontakt & Anfahrt</a>
-                    <a href="/karriere/">Karriere bei cotedo</a>
-                    <a href="/downloads/">Downloads</a>
-                    <a href="/impressum/">Impressum</a>
-                    <a href="/datenschutz/">Datenschutz</a>
+                    <a href="/de/kontakt-anfahrt/">Kontakt & Anfahrt</a>
+                    <a href="/de/karriere/">Karriere bei cotedo</a>
+                    <a href="/de/downloads/">Downloads</a>
+                    <a href="/de/impressum/">Impressum</a>
+                    <a href="/de/datenschutz/">Datenschutz</a>
                 </div>
                 <div class="pure-u-11-12 pure-u-lg-1-4 seal">
                     <img src="/assets/img/ic_dekra.png" width="274" height="109" class="img-fluid">
@@ -224,7 +225,6 @@ Sie erreichen uns telefonisch unter +49 (0)89 716 77 97 00 und per Mail: <a href
         </div>
     </div>
 </a>
-
 <!-- Scripts -->
 <script> function lsOptout() { document.cookie = 'leadscope-disable=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/'; } </script>
 <script type="text/javascript" id="resolver" token="74467fc93c7c1971e1db8fed52f71ff27827cdae" src="https://track.leadscope.de/resolve.min.js" async></script>
@@ -235,6 +235,81 @@ Sie erreichen uns telefonisch unter +49 (0)89 716 77 97 00 und per Mail: <a href
 <script src="/assets/js/vendor/exitintent.min.js"></script>
 <script src="/assets/js/vendor/bodyScrollLock.min.js"></script>
 
+<script src="/assets/js/eim.min.js"></script>
+<div class="eim-modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="eim-dialog">
+    <div class="close"></div>
+    <div class="caption">Die 7 häufigsten Fehler im Aftersales</div>
+    <div class="row">
+      <div class="box one">
+        <p>… sind leicht zu vermeiden! Fordern Sie unser kostenloses Whitepaper an, um zu erfahren wie.</p>
+        <div class="wpform-wrapper">
+  <form id="wpform">
+    <div class="row">
+      <input type="radio" id="F" name="GESCHLECHT" value="2" required>
+      <label for="female">Frau</label>
+      <input type="radio" id="F" name="GESCHLECHT" value="1">
+      <label for="male">Herr</label>
+    </div>
+    <div class="row">
+      <div class="ic-wrapper">
+        <div class="ic user"></div>
+      </div>
+      <input name="NAME" type="text" placeholder="Nachname" minlength="2" required>
+    </div>
+    <div class="row">
+      <div class="ic-wrapper">
+        <div class="ic envelope"></div>
+      </div>
+      <input name="EMAIL" type="email" placeholder="E-Mail-Adresse" required>
+    </div>
+    <div class="row full-center">
+      <script>
+        function handleCaptchaResponse(data) {
+          document.getElementById('captcha-response').value = data;
+          var event = new Event('captchaChange');
+          document.getElementById('wp-captcha').dispatchEvent(event);
+          document.getElementById('captcha-error').classList.remove('visible');
+        }
+      </script>
+      <div class="g-recaptcha" id="wp-captcha" data-sitekey="6LfMQtIZAAAAAFtlZ-5AgYnvp8dwfNX4GA3ayP7E"
+        data-callback="handleCaptchaResponse"></div>
+      <input type="hidden" name="g-recaptcha-response" id="captcha-response">
+    </div>
+    <div class="row full-center">
+      <div id="captcha-error" class="error">☝️ Bite lösen Sie das Captcha.</div>
+    </div>
+    <div class="row disclaimer">Mit Klick auf "Whitepaper anfordern" willige ich ein, dass meine Daten zur Bearbeitung meiner Anfrage verarbeitet und gespeichert werden.
+</div>
+    <div class="row">
+      <input type="hidden" name="email_address_check" value="">
+      <input type="hidden" name="locale" value="de">
+      <button type="submit">
+        <div class="lds-ripple">
+          <div></div>
+          <div></div>
+        </div>
+        <span class="btn-text">Whitepaper anfordern</span>
+      </button>
+    </div>
+  </form>
+  <div class="ol error">
+    <div class="ic error pb-2"></div>
+    <p>Da ging leider etwas schief. Bitte versuchen Sie es erneut.</p>
+  </div>
+  <div class="ol success">
+    <div class="ic success pb-2"></div>
+    <p>Vielen Dank für Ihre Anfrage. Ihr Whitepaper wird Ihnen Kürze zugesendet.</p>
+  </div>
+</div>
+<script src="https://www.google.com/recaptcha/api.js?hl=de"></script>
+      </div>
+      <div class="box two">
+        <img src="/assets/img/whitepaper_preview.jpg" height="320">
+      </div>
+    </div>
+  </div>
+</div>
 <script>
     var das = 'ga-disable-UA-110803381-2';
     if (document.cookie.indexOf(das + '=true') > -1) window[das] = true;

@@ -92,7 +92,7 @@
                class="pure-menu-link nav-link active">
                 news
                 <span class="news-indicator"
-                      data-latest="2020-03-04"></span></a>
+                      data-latest="2020-07-03"></span></a>
         </li>
         <li class="pure-menu-item">
             <button class="lang-dd">en<span class="dd-arrow"></span></button>
@@ -123,7 +123,9 @@
             <p>cotedo provides concept and implementation for car dealership Boden in only 8 weeks</p>
 
 
+            
             <img src="/assets/img/news/boden.png" class="img-float-left img-news">
+            
             
 
 <p>Eight weeks, that is all that it took cotedo to provide a concept and all the necessary
@@ -192,7 +194,6 @@ forward to new projects together!</p>
                     <div class="heading">Competencies</div>
                     <a href="/en/strengths/automotive-aftersales-consulting/">Automotive Aftersales Consulting</a>
                     <a href="/en/strengths/sales-distribution-management/">Sales & Distribution Management</a>
-                    <a href="/en/strengths/project-rollout-management/">Project & Rollout Management</a>
                     <a href="/en/strengths/marketing-communications/">Marketing & Communication</a>
                 </div>
                 <div class="pure-u-11-12 pure-u-lg-1-6">
@@ -226,7 +227,6 @@ forward to new projects together!</p>
         </div>
     </div>
 </a>
-
 <!-- Scripts -->
 <script> function lsOptout() { document.cookie = 'leadscope-disable=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/'; } </script>
 <script type="text/javascript" id="resolver" token="74467fc93c7c1971e1db8fed52f71ff27827cdae" src="https://track.leadscope.de/resolve.min.js" async></script>
@@ -237,6 +237,81 @@ forward to new projects together!</p>
 <script src="/assets/js/vendor/exitintent.min.js"></script>
 <script src="/assets/js/vendor/bodyScrollLock.min.js"></script>
 
+<script src="/assets/js/eim.min.js"></script>
+<div class="eim-modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="eim-dialog">
+    <div class="close"></div>
+    <div class="caption">The 7 Most Common Mistakes in Aftersales</div>
+    <div class="row">
+      <div class="box one">
+        <p>… are easy to avoid! Request our free whitepaper to find out how.</p>
+        <div class="wpform-wrapper">
+  <form id="wpform">
+    <div class="row">
+      <input type="radio" id="F" name="GESCHLECHT" value="2" required>
+      <label for="female">Ms.</label>
+      <input type="radio" id="F" name="GESCHLECHT" value="1">
+      <label for="male">Mr.</label>
+    </div>
+    <div class="row">
+      <div class="ic-wrapper">
+        <div class="ic user"></div>
+      </div>
+      <input name="NAME" type="text" placeholder="Last name" minlength="2" required>
+    </div>
+    <div class="row">
+      <div class="ic-wrapper">
+        <div class="ic envelope"></div>
+      </div>
+      <input name="EMAIL" type="email" placeholder="Email address" required>
+    </div>
+    <div class="row full-center">
+      <script>
+        function handleCaptchaResponse(data) {
+          document.getElementById('captcha-response').value = data;
+          var event = new Event('captchaChange');
+          document.getElementById('wp-captcha').dispatchEvent(event);
+          document.getElementById('captcha-error').classList.remove('visible');
+        }
+      </script>
+      <div class="g-recaptcha" id="wp-captcha" data-sitekey="6LfMQtIZAAAAAFtlZ-5AgYnvp8dwfNX4GA3ayP7E"
+        data-callback="handleCaptchaResponse"></div>
+      <input type="hidden" name="g-recaptcha-response" id="captcha-response">
+    </div>
+    <div class="row full-center">
+      <div id="captcha-error" class="error">☝️ Bite lösen Sie das Captcha.</div>
+    </div>
+    <div class="row disclaimer">By clicking on "Request Whitepaper" I agree that my data will be processed and saved for the purposes of fulfilling my request.
+</div>
+    <div class="row">
+      <input type="hidden" name="email_address_check" value="">
+      <input type="hidden" name="locale" value="en">
+      <button type="submit">
+        <div class="lds-ripple">
+          <div></div>
+          <div></div>
+        </div>
+        <span class="btn-text">Request Whitepaper</span>
+      </button>
+    </div>
+  </form>
+  <div class="ol error">
+    <div class="ic error pb-2"></div>
+    <p>Something went wrong. Please try again.</p>
+  </div>
+  <div class="ol success">
+    <div class="ic success pb-2"></div>
+    <p>Thank you for your request. Your whitepaper will be sent out shortly.</p>
+  </div>
+</div>
+<script src="https://www.google.com/recaptcha/api.js?hl=de"></script>
+      </div>
+      <div class="box two">
+        <img src="/assets/img/whitepaper_preview.jpg" height="320">
+      </div>
+    </div>
+  </div>
+</div>
 <script>
     var das = 'ga-disable-UA-110803381-2';
     if (document.cookie.indexOf(das + '=true') > -1) window[das] = true;
